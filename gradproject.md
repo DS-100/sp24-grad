@@ -43,12 +43,14 @@ There are **six** deliverables in the graduate project element of the course.
 
 | Deadline (at 11:59pm Pacific)| Event / Deliverable | Link | Grading Weight |
 |--------------------------	|---------------------------------------------	|---------------------------------------------	|-----------|
-| 10/06 | Group Formation + Research Proposal| [Google Form](https://forms.gle/KnJPVvbcr6j6wt7GA) | 5% |
-| 10/22 | Checkpoint 1: EDA + Internal Peer Review| [Checkpoint 1](https://www.gradescope.com/courses/564792/assignments/3537706), [Internal Peer Review](https://forms.gle/TMbH2c7Ukpn2marM9)| 10% |
-| Week of 11/6 | Checkpoint 2: Mandatory Check-In  | | 7.5% |
-| 11/24 | Checkpoint 3: Project Report First Draft	+ Internal Peer Review| | 20% |
-| 12/01 |	External Peer-Review | | 7.5% |
-| 12/08 | Final Project Report (including the final YouTube video)| | 50% |
+| 3/15 | Research Proposal and Project Groups Due | [Google Form](https://forms.gle/KnJPVvbcr6j6wt7GA) | 5% |
+| 3/22 | Checkpoint 1: EDA + Internal Peer Review 1 Due | [Checkpoint 1](https://www.gradescope.com/courses/564792/assignments/3537706), [Internal Peer Review](https://forms.gle/TMbH2c7Ukpn2marM9)| 10% |
+| Week of 4/8 | Checkpoint 2: Mandatory Check-in with TA  | | 7.5% |
+| 4/19 | Internal Peer Review 2 Due | | 20% |
+| 4/26 |	First Draft of Final Report Due | | 7.5% |
+| 4/29 |	External Peer Review Opens | | 7.5% |
+| 5/3 |	External Peer Review Due | | 7.5% |
+| 5/10 | Final Project Report Due, Presentation Video Due | | 50% |
 
 ### Late Policy
 
