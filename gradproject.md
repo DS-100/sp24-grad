@@ -91,7 +91,7 @@ Take a look at the other functions in `utils.py` if you'd like to use other data
 In disaster situations, it is important for emergency response efforts to have access to quick and accurate information about an area in order to respond effectively. This project will explore how data science techniques can be useful for such efforts.
 
 #### Sections
-This document contains the following sections:
+The specifications for this project contains the following sections:
 * [Mission](#mission)
 * [Dataset Description](#dataset-description)
 * [Getting Started](#getting-started)
@@ -119,7 +119,7 @@ To help you with onboarding, the agency has provided a starter notebook `starter
 2. Processing different color channels in the dataset images.
 3. Extracting feature information from images using tools from `feature_utils.py`.
 
-##### Exploratory Data Analysis
+#### Exploratory Data Analysis
 Now that you have successfully been onboarded, the agency would like you to start performing some exploratory data analysis to build some initial understanding of the data. As part of the exploratory data analysis, the agency is interested in understanding certain aspects of the dataset better. Specifically, they are looking for:
 
 - Basic statistics about the dataset, such as the number of images per disaster type and the distribution of image sizes and damage labels.
