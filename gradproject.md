@@ -87,41 +87,74 @@ Hopefully, the above steps help you to access the data on Google Drive. There ar
 
 Take a look at the other functions in `utils.py` if you'd like to use other data sources to supplement your project. 
 
-### Topic 1: COVID-19
+### Topic 1: Computer Vision
+In disaster situations, it is important for emergency response efforts to have access to quick and accurate information about an area in order to respond effectively. This project will explore how data science techniques can be useful for such efforts.
 
-#### Dataset A: Testing and Mortality Statistics
-{:.no_toc}
+#### Sections
+This document contains the following sections:
+* [Mission](#mission)
+* [Dataset Description](#dataset-description)
+* [Getting Started](#getting-started)
+* [Exploratory Data Analysis](#exploratory-data-analysis)
+* [Project Tasks](#project-tasks)
+* [Resources](#resources)
+* [Project Goals](#project-goals)
 
-This dataset contains US reports on COVID-19 testing and cases from the [COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19) and CDC (Centers for Disease Control and Prevention). You can access all the data within the `Topic 1/Dataset A` directory on Google Drive:
+#### Mission
+You have been hired by a crisis response agency to help assist them with your impressive data science skills! The agency has found that using satellite imagery is highly useful for supplying information for their response efforts. Unfortunately however, annotating these high resolution images can be a slow process for analysts. Your mission is to help address this challenge by developing an automatic computer vision approach. 
 
-* `csse_covid_19_daily_reports_us.csv` contains US daily reports ([documentation](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data#usa-daily-state-reports-csse_covid_19_daily_reports_us))
-* `cdc_death_counts_by_sex_age_state.csv` contains US reports on deaths involving COVID-19, pneumonia, and influenza reported to NCHS by sex, age, group, and state. ([documentation](https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Sex-Age-and-S/9bhg-hcku))
-* `cdc_death_counts_by_conditons.csv` contains US weekly reports on health conditions and contributing causes mentioned in conjunction with deaths involving COVID-19. ([documentation](https://data.cdc.gov/NCHS/Conditions-contributing-to-deaths-involving-corona/hk9y-quqm))
+#### Dataset Description
+The agency would like you to develop your approach on their internal dataset, derived from the [xView2 Challenge Dataset](https://xview2.org/). This dataset contains satellite images of buildings after various natural disasters. The buildings are labeled based on the level of damage sustained on a scale ranging from 0 (no damage) to 3 (destroyed). 
 
-You must choose to work with **at least 2 of the reports** above in your analysis.
+You can access all of the data within the `/home/jovyan/shared/satellite-image-data` directory on datahub. The dataset consists of the following folders for different natural disasters
+1. `midwest-flooding`
+2. `socal-fire`
+3. `hurricane-matthew`
 
-<!--
-#### Dataset B: Impact on Health Care
-{:.no_toc}
+Within each folder is a zip file `train_images.npz` containing the satellite images as numpy arrays and a `train_labels.npy` file with corresponding damage level labels.
 
-This dataset contains reports from the Household Pulse Survey launched by NCHS in partnership with the U.S. Census Bureau; it focuses on how COVID-19 has affected survey correspondents' mental health and their access to health care. In addition, it provides statistics on the usage of telemedicine by healthcare providers. You can access all the data within the `Topic 1/Dataset B` directory on Google Drive:
+#### Getting Started
+To help you with onboarding, the agency has provided a starter notebook `starter.ipynb` which will introduce you to the dataset and some useful internal tools. After completing the onboarding assignment you will be comfortable with the following:
+1. Loading and visualizing data using tools from `data_utils.py`
+2. Processing different color channels in the dataset images.
+3. Extracting feature information from images using tools from `feature_utils.py`.
 
-* `nchs_covid_indicators_of_anxiety_depression.csv` contains survey estimates of responses to questions that are indicators of anxiety or depression based on the reported frequency of symptoms within the past week. ([documentation](https://data.cdc.gov/NCHS/Indicators-of-Anxiety-or-Depression-Based-on-Repor/8pt5-q6wp))
-* `nchs_covid_mental_health_care.csv` contains survey estimates of responses to questions that ask if participants have accessed mental health care in the past 4 weeks. ([documentation](https://data.cdc.gov/NCHS/Mental-Health-Care-in-the-Last-4-Weeks/yni7-er2q))
-* `nchs_covid_health_insurance_coverage.csv` contains survey estimates of responses to questions that ask about participants' health insurance coverage. ([documentation](https://data.cdc.gov/NCHS/Indicators-of-Health-Insurance-Coverage-at-the-Tim/jb9g-gnvr))
-* `nchs_covid_reduced_access_to_health_care.csv` contains survey estimates of responses to questions that ask if participants have experienced a delay or been refused health care due to COVID-19. ([documentation](https://data.cdc.gov/NCHS/Indicators-of-Reduced-Access-to-Care-Due-to-the-Co/xb3p-q62w))
-* `nchs_covid_telemedicine_usage.csv` contains survey estimates of responses to questions that ask if healthcare providers offered telemedicine (including video and telephone appointments) -- both during and before the pandemic -- and about the use of telemedicine during the pandemic. ([documentation](https://data.cdc.gov/NCHS/Use-of-Telemedicine-During-COVID-19/8xy9-ubqz))
+##### Exploratory Data Analysis
+Now that you have successfully been onboarded, the agency would like you to start performing some exploratory data analysis to build some initial understanding of the data. As part of the exploratory data analysis, the agency is interested in understanding certain aspects of the dataset better. Specifically, they are looking for:
 
-You must choose to work with **at least 3 of the reports** above in your analysis.
+- Basic statistics about the dataset, such as the number of images per disaster type and the distribution of image sizes and damage labels.
+- Insights into useful image features for classifying images based on disaster type or damage level. Previous interns have found color information to be potentially useful. You are tasked with verifying this and exploring whether color features can effectively differentiate:
+    - `midwest-flooding` from `socal-fire` images.
+    - Damage levels 1 and 3 within the `hurricane-matthew` dataset.
 
-#### Dataset C: Ongoing Research
-{:.no_toc}
+Please prepare an EDA report to present to the agency leadership with the above in mind.
 
-This dataset contains (in full-text and metadata form) scholarly articles related to COVID-19. The data are optimized for machine readability and made available for use by the global research community. The dataset is intended to mobilize researchers to generate new insights from the articles in support of the fight against this infectious disease. You can access all the data within the `Topic 1/Dataset C` directory on Google Drive:
+#### Project Tasks
+Now that leadership is pleased with your initial EDA report and confident in your data science ability, they would like you to assist the agency with various tasks.
 
-* `covid_open_research_dataset.txt` contains the link that will guide you to obtain the full-text and metadata dataset of COVID-related research articles. ([documentation](https://azure.microsoft.com/en-us/services/open-datasets/catalog/covid-19-open-research/))
--->
+##### Task A: Disaster Type Classification 
+The agency consists of different subdivisions for assisting with different disaster types, e.g., fires, floods, etc. In the event of a disaster, the agency mounts its response effort by first assessing the type of disaster and then requesting the appropriate subdivision to assist with the disaster. 
 
+Your task is to assist the agency with making this initial call quickly by automatically classifying images based on the disaster scenario.
+
+##### Task B: Damage Level Classification
+The agency needs to know how severe a disaster is in order to allocate resources for a response effectively. The agency is especially concerned with human lives and uses building damage as an important metric for disaster severity. 
+
+Your task is to assist the agency by automatically detecting the building damage level after a disaster.
+
+#### Resources
+To assist you in your efforts the agency has compiled the following list of resources
+- For more background about the dataset you can look at the [paper](https://arxiv.org/pdf/1911.09296.pdf) associated with the dataset. 
+
+- For image processing, [scikit-image](https://scikit-image.org/) is a very useful library. This [tutorial](https://www.kaggle.com/code/bextuychiev/full-tutorial-on-image-processing-in-skimage) may be helpful for learning how to use the library.
+
+- For problems with imbalanced classes, the [imblearn](https://imbalanced-learn.org/stable/index.html) library has useful tools and examples.
+
+#### Project Goals
+In addition to greatly helping out the agency, by accepting this job you will
+- Learn to work with image data by learning to use common feature extraction techniques like Sobel edge filtering.
+- Learn to work on real world data with common complexities such as class imbalance, low signal to noise ratio, and high dimensional data.
+- Learn how to design effective preprocessing and featurization pipelines for solving difficult machine learning tasks.
 ### Topic 2: Climate and the Environment
 
 #### Dataset A: General Measurements and Statistics <a name="2-a"></a>
