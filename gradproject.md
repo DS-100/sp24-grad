@@ -25,7 +25,7 @@ The purpose of the project is to give students experience in both open-ended dat
 
 ## Deliverables
 
-There are **six** deliverables in the graduate project element of the course. 
+There are **six** deliverables in the graduate project element of the course.
 <ul>
 <li><b>Group Formation + Research Proposal:</b> You will form a project group and will submit a google form stating your research proposal. Please see <a href="#group-formation--research-proposal">below</a> for more information. </li>
 <li><b>Checkpoint 1: EDA + Internal Peer Review:</b> You will need to submit a write-up + code for Exploratory Data Analysis on your dataset. You will also have to submit an internal peer review. Please see <a href="#checkpoint-1-eda--internal-peer-review">below</a> for more information. </li>
@@ -69,23 +69,7 @@ In general, if you're drawing any conclusions regarding causality, please be sur
 
 ### Accessing Datasets
 
-All the datasets provided by us can be found inside the following link on Google Drive:
-
-<p align="center">
-<a href="https://drive.google.com/drive/folders/1GiQJ-wu_ZKr_9FZGqyY-aBHahkDObdAr?usp=drive_link">Graduate Project Datasets Google Drive</a>
-</p>
-
-If you wish to work on Datahub, we've provided some instructions on how to move the data from Google Drive onto Datahub. However, your Datahub kernel can often only manage 2GB of memory at maximum. Given this limitation (and the size of most datasets), we recommend instead using Google Drive + Google Colaboratory. If you instead wish to work on the project locally, you can also download the files containing the datasets for each topic.
-
-#### **How to Pull Data from Google Drive directly onto Datahub**
-{:.no_toc}
-
-1. _Get the Google Drive ID of the file_. To do this, first get the URL of the file. You can do this by right-clicking on the file in Google Drive and pressing 'Share -> Copy Link'. Once you have the URL, you can find the ID by looking for the set of characters after the /d/ in the URL. For example, in the following URL: `https://drive.google.com/file/d/16-4O_lJGioPC5G9il4vR_XrCgJ3J9_zK/view?usp=sharing`, the Google Drive ID would be `16-4O_lJGioPC5G9il4vR_XrCgJ3J9_zK`.
-2. _Download the data_. Once you have the Google Drive ID of the file, you can use the `utils.py` file inside the `grad_proj` directory on your Datahub. This file has a number of useful functions for downloading data. You'll want to use `fetch_and_cache_gdrive`. You will call the function in a notebook. The function takes in two arguments: **(1) Google Drive ID** that you got in the previous step, and **(2) name of the file**. Calling the function will generate a `data` folder and place the file into that folder, using the name you came up with as the second argument of the function.
-
-Hopefully, the above steps help you to access the data on Google Drive. There are other ways to move the data onto Datahub. Consider looking into [`gdown`](https://github.com/wkentaro/gdown) or just downloading the data from Google Drive and uploading it to Datahub manually.
-
-Take a look at the other functions in `utils.py` if you'd like to use other data sources to supplement your project. 
+All the datasets provided by us can be found in the Datahub directory `shared/sp24_grad_project_data`. You can access the data directly from Datahub. If you wish to work on the project locally, you can also download the files containing the datasets for each topic. As you train more complex model, DataHub might not have enough hardware resource or memory, that case you are welcomed to use Google Colab or your local machine.
 
 ### Topic 1: Computer Vision
 In disaster situations, it is important for emergency response efforts to have access to quick and accurate information about an area in order to respond effectively. This project will explore how data science techniques can be useful for such efforts.
@@ -101,10 +85,10 @@ The specifications for this project contains the following sections:
 * [Project Goals](#project-goals)
 
 #### Mission
-You have been hired by a crisis response agency to help assist them with your impressive data science skills! The agency has found that using satellite imagery is highly useful for supplying information for their response efforts. Unfortunately however, annotating these high resolution images can be a slow process for analysts. Your mission is to help address this challenge by developing an automatic computer vision approach. 
+You have been hired by a crisis response agency to help assist them with your impressive data science skills! The agency has found that using satellite imagery is highly useful for supplying information for their response efforts. Unfortunately however, annotating these high resolution images can be a slow process for analysts. Your mission is to help address this challenge by developing an automatic computer vision approach.
 
 #### Dataset Description
-The agency would like you to develop your approach on their internal dataset, derived from the [xView2 Challenge Dataset](https://xview2.org/). This dataset contains satellite images of buildings after various natural disasters. The buildings are labeled based on the level of damage sustained on a scale ranging from 0 (no damage) to 3 (destroyed). 
+The agency would like you to develop your approach on their internal dataset, derived from the [xView2 Challenge Dataset](https://xview2.org/). This dataset contains satellite images of buildings after various natural disasters. The buildings are labeled based on the level of damage sustained on a scale ranging from 0 (no damage) to 3 (destroyed).
 
 You can access all of the data within the `/home/jovyan/shared/satellite-image-data` directory on datahub. The dataset consists of the following folders for different natural disasters
 1. `midwest-flooding`
@@ -132,19 +116,19 @@ Please prepare an EDA report to present to the agency leadership with the above 
 #### Project Tasks
 Now that leadership is pleased with your initial EDA report and confident in your data science ability, they would like you to assist the agency with various tasks.
 
-##### Task A: Disaster Type Classification 
-The agency consists of different subdivisions for assisting with different disaster types, e.g., fires, floods, etc. In the event of a disaster, the agency mounts its response effort by first assessing the type of disaster and then requesting the appropriate subdivision to assist with the disaster. 
+##### Task A: Disaster Type Classification
+The agency consists of different subdivisions for assisting with different disaster types, e.g., fires, floods, etc. In the event of a disaster, the agency mounts its response effort by first assessing the type of disaster and then requesting the appropriate subdivision to assist with the disaster.
 
 Your task is to assist the agency with making this initial call quickly by automatically classifying images based on the disaster scenario.
 
 ##### Task B: Damage Level Classification
-The agency needs to know how severe a disaster is in order to allocate resources for a response effectively. The agency is especially concerned with human lives and uses building damage as an important metric for disaster severity. 
+The agency needs to know how severe a disaster is in order to allocate resources for a response effectively. The agency is especially concerned with human lives and uses building damage as an important metric for disaster severity.
 
 Your task is to assist the agency by automatically detecting the building damage level after a disaster.
 
 #### Resources
 To assist you in your efforts the agency has compiled the following list of resources
-- For more background about the dataset you can look at the [paper](https://arxiv.org/pdf/1911.09296.pdf) associated with the dataset. 
+- For more background about the dataset you can look at the [paper](https://arxiv.org/pdf/1911.09296.pdf) associated with the dataset.
 
 - For image processing, [scikit-image](https://scikit-image.org/) is a very useful library. This [tutorial](https://www.kaggle.com/code/bextuychiev/full-tutorial-on-image-processing-in-skimage) may be helpful for learning how to use the library.
 
@@ -155,77 +139,232 @@ In addition to greatly helping out the agency, by accepting this job you will
 - Learn to work with image data by learning to use common feature extraction techniques like Sobel edge filtering.
 - Learn to work on real world data with common complexities such as class imbalance, low signal to noise ratio, and high dimensional data.
 - Learn how to design effective preprocessing and featurization pipelines for solving difficult machine learning tasks.
-### Topic 2: Climate and the Environment
 
-#### Dataset A: General Measurements and Statistics <a name="2-a"></a>
-{:.no_toc}
+### Topic 2: Natural Language Processing
+A commont task in real life data analysis involves working with text data.
+In this project, we will work with a dataset consisting natural language questions asked by human and answers provided by chatbots.
 
-This dataset contains some general statistics and measurements of various aspects of the climate and the environment. You can access all the data within the `Topic 2/Dataset A` directory on Google Drive. It includes the following reports:
+The goal of this project is to:
 
-- `daily_global_weather_2020.csv` contains data on daily temperature and precipitation measurements. To learn how to use the data from this file, please read the following section on the first report.
-- `us_greenhouse_gas_emissions_direct_emitter_facilities.csv` and `us_greenhouse_gas_emission_direct_emitter_gas_type.csv` contain data reported by EPA (Environment Protection Agency) on greenhouse gas emissions, detailing the specific types of gas reported by facilities and general information about the facilities themselves. The dataset is made available through EPA's [GHGRP (Greenhouse Gas Reporting Program)](https://www.epa.gov/ghgreporting).
-- `us_air_quality_measures.csv` contains data from the EPA's AQS (Air Quality System) that measures air quality on a county level from approximately 4000 monitoring stations around the country. ([source](https://data.cdc.gov/Environmental-Health-Toxicology/Air-Quality-Measures-on-the-National-Environmental/cjae-szjv))
-- `aqi_data` contains more data from the EPA from a number of sites across a multitude of different metrics. ([source](https://aqs.epa.gov/aqsweb/airdata/download_files.html))
+- Prepare you to work with text data by learning common techniques like embedding generation, tokenization, and topic modeling.
+- Work with real world data in its targetted domain. The data is non-trivial in both size and complexity.
+- Ask open ended questions and answer them using data at hand.
 
-The following subsection contains more details on how to work with the first report on global daily temperature and precipitation:
-
-The first report on daily temperature and precipitation is measured by weather stations in the [Global Historical Climatology Network](https://www.ncdc.noaa.gov/data-access/land-based-station-data/land-based-datasets/global-historical-climatology-network-ghcn) for January to December 2020.
-
-The data in `daily_global_weather_2020.csv` is derived from the source file at [https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/by_year/2020.csv.gz](https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/by_year/2020.csv.gz).
-
-To help you get started with a dataset of manageable size, we have preprocessed the GHCN dataset to include only the average temperature and precipitation measurements from stations that have both measurements. Each row in the preprocessed dataset contains both the average temperature and precipitation measurements for a given station on a given date.
-
-If you wish to explore the climate data for a different year, you can use the `GHCN_data_preprocessing.ipynb` notebook to download and perform the preprocessing described above. Please be advised that depending on the dataset size for a given year, `GHCN_data_preprocessing.ipynb` may not run on DataHub. 
-
-The data contains only the (latitude, longitude) coordinates for the weather stations. To map the coordinates to geographical locations, the [reverse-geocoder](https://github.com/thampiman/reverse-geocoder) package mentioned in the [References](#coordinates) section might be helpful.
-
-#### Dataset B: Biodiversity in the Ecosystem
-{:.no_toc}
-
-This dataset contains studies focused specifically on the impact of environmental and climate changes on biodiversity and the local ecosystems. You can access all the data within the `Topic 2/Dataset B` directory on Google Drive. It includes the following reports:
-
-- `bioCON_plant_diversity.csv` contains data collected as part of an ecological experiment, BioCON (Biodiversity, CO2, and Nitrogen), that started in 1997 and focused on studying biodiversity within the plant species at Cedar Creek Ecosystem Science Preserve. ([documentation](https://search.dataone.org/view/https%3A%2F%2Fpasta.lternet.edu%2Fpackage%2Fmetadata%2Feml%2Fknb-lter-cdr%2F339%2F9))
-- `plant_pollinator_diversity_set1.csv` and `plant_pollinator_diversity_set2.csv` contain ecological data collected from a long-term observation study from 2011 to 2018 that focuses on plant-pollinator interaction and its impact on local biodiversity. ([documentation](https://search.dataone.org/view/https%3A%2F%2Fpasta.lternet.edu%2Fpackage%2Fmetadata%2Feml%2Fknb-lter-and%2F5216%2F6))
-- `national_parks_biodiversity_parks.csv` and `national_parks_biodiversity_species.csv` contain data published by the National Park Service on animal and plant species identified in individual national parks.
-
-### Topic 3: Recommender Systems <a name="tech"></a>
-
-<!--#### Dataset A: Space Exploration
-{:.no_toc}
-
-This dataset contains a set of reports from pioneering researches that explore the outer space. Much of the data from these studies have provided a rich foundation for a variety of large-scale research projects that explore widely discussed topics such as habitable exoplanets or search for extraterrestrial life.
-
-You can access all the data within the `Topic 3/Dataset A` directory on Google Drive. It includes the following reports:
-
-- `kepler_exoplanet_search.csv` contains data collected by NASA from the Kepler Space Observatory as part of a long-term study on finding habitable exoplanets from over 10,000 candidates. ([source](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koi))
-- `kelper_planetary_system_composite.csv` contains data collected by NASA from the Kelper Space Observatory as part of an ongoing study that tabulates all confirmed planetary systems outside the solar system. You are encouraged to use the composite data in conjunction with the exoplanet search results above. ([source](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars))
-- `nasa_neows.csv` contains data collected from NASA's [NeoWs (Near Earth Object Web Service)](https://neowise.ipac.caltech.edu/) that collects information on near earth asteroids.-->
+#### Dataset Description
 
 
-A recommender system is an information filtering system that focuses on predicting the preference a user would give to an item by predicting its rank; it is used in a variety of areas, such as search engines, online shopping platforms, etc. This dataset contains a set of reports on various tools using a recommender system.
+The source dataset comes from https://huggingface.co/datasets/lmsys/chatbot_arena_conversations. The author describes the dataset as follows:
 
-You can access all the data within the `Topic 3/Dataset A` through the `Topic 3/Dataset C`  directory on Google Drive.
+> This dataset contains 33K cleaned conversations with pairwise human preferences. It is collected from 13K unique IP addresses on the Chatbot Arena from April to June 2023. Each sample includes a question ID, two model names, their full conversation text in OpenAI API JSON format, the user vote, the anonymized user ID, the detected language tag, the OpenAI moderation API tag, the additional toxic tag, and the timestamp.
 
-#### Dataset A: Fitness Recommendations
-{:.no_toc}
+[Chatbot Arena](https://chat.lmsys.org/) is a platform where users can ask questions and two chatbots will provide answers. The user then votes on which chatbot provided the best answer. The dataset contains the questions, the answers, and the user votes.
 
-These datasets consist of user sports records collected from Endomondo. They include a rich variety of sequential sensor data, such as metrics like heart rate, speed, GPS coordinates. Additionally, the datasets contain information about the type of sport, user gender, and weather conditions, which encompass temperature and humidity.
+You can find the processed dataset in `./chatbot-arena-conversations.jsonl.gz`. The dataset is in JSON line format and compressed using gzip. It has gone through the following preprocessing steps to make analysis easier:
 
-- Relevant data can be found in `Topic 3/Dataset A` on the Google Drive. You may also visit the [main page](https://sites.google.com/eng.ucsd.edu/fitrec-project/home) for documentation and links to download the dataset.
+- Removed non-English conversations.
+- Removed conversations with more than one round.
+- Removed conversations classified as toxic or harmful.
 
-#### Dataset B: Amazon Recommendations
-{:.no_toc}
+The dataset you will be working with contains `25322` rows (out of `33000` total rows) and `7` columns. The columns are:
 
-These datasets comprise Amazon reviews, which encompass ratings, textual content, and helpfulness votes for a wide variety of Amazon categories, such as fashion, electronics, and pet supplies. They also contain product metadata, including descriptions, category information, price, brand, and image features.
+- `question_id`: A unique identifier for the question.
+- `model_a`: The name of the first chatbot model.
+- `model_b`: The name of the second chatbot model.
+- `winner`: The name of the chatbot model that won the user vote.
+- `judge`: The anonymized user ID that voted.
+- `conversation_a`: The conversation between the user and `model_a`.
+- `conversation_b`: The conversation between the user and `model_b`.
 
-- Instructions on how to access the data is located in `Topic 3/Dataset B` on the Google Drive. You may also directly visit the [main page](https://nijianmo.github.io/amazon/index.html), which includes general information about the dataset, such as metadata and categories, as well as the dataset request process. 
+<!-- collapse -->
+<details>
+  <summary>An example of the data is as follows:</summary>
+  ```json
+{
+  "question_id": "c0fc42c6f5f14f2aa5a89f71f8553730",
+  "model_a": "vicuna-13b",
+  "model_b": "koala-13b",
+  "winner": "model_a",
+  "judge": "arena_user_973",
+  "conversation_a": [
+    {
+      "content": "Count from 1 to 10 with step = 3",
+      "role": "user"
+    },
+    {
+      "content": "1, 4, 7, 10\n\nCounting with a step of 3 means that you will increase the number by 3 each time. So, the first number is 1, the next is 4 (1 + 3), the next is 7 (4 + 3), and so on.",
+      "role": "assistant"
+    }
+  ],
+  "conversation_b": [
+    {
+      "content": "Count from 1 to 10 with step = 3",
+      "role": "user"
+    },
+    {
+      "content": "1, 4, 7, 10",
+      "role": "assistant"
+    }
+  ]
+}
+```
+</details>
 
-#### Dataset C: Application Usage Recommendation
-{:.no_toc}
+There are two axuliary dataset that you can use to help with your analysis:
 
-The frappe dataset contains a context-aware app usage log consisting of 96,203 entries by 957 users for 4,082 apps used in various contexts. These contexts include factors such as time of day, country, number of downloads, and cost.
+- `./chatbot-arena-prompts-embeddings.npy` contains the 256 dimensional text embeddings for each of the human question. The embeddings are generated using OpenAI's `text-embedding` model. We will explain what is embedding and how can you use them later in this notebook. It has shape (25322, 256) and have dtype('float32').
+- `./chatbot-arena-gpt3-scores.jsonl.gz` contains labels for the dataset you can use for later modeling tasks. It has the following fields:
+  - `question_id`: The unique identifier for the question, as seen in `./chatbot-arena-conversations.jsonl.gz`.
+  - `prompt`: The extracted human question. This is equivalent to the first message in `conversation_a` and `conversation_b` in `./chatbot-arena-conversations.jsonl.gz`.
+  - `openai_scores_raw_choices_nested`: The response from OpenAI GPT 3.5 model (see later for the prompt). It contains the evaluated topic model, reason for a hardness score from 1 to 10, and the value. For each prompt, we have 3 responses. We extracted the fields into the following columns.
+  - `topic_modeling_1`, `topic_modeling_2`, `topic_modeling_3`: The topic modeling for the first, second, and third response. Each topic should have two words.
+  - `score_reason_1`, `score_reason_2`, `score_reason_3`: The reason for the hardness score for the first, second, and third response.
+  - `score_value_1`, `score_value_2`, `score_value_3`: The hardness score for the first, second, and third response.
 
-- `frappe.csv` and `meta.csv` contain data on mobile app usage for users in various contexts. For general information about the dataset, please refer to `frappe_README.txt` and `stats.ipynb`.
+<details>
+<summary>An example of the data is as follows:</summary>
+
+```json
+{
+  "question_id": "58210e39b3fd4441a2bd4a518bb44c2d",
+  "prompt": "What is the difference between OpenCL and CUDA?",
+  "openai_scores_raw_choices_nested": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n    \"topic_modeling\": \"Technical Comparison\",\n    \"score_reason\": \"This prompt requires the AI to accurately compare and contrast two distinct technologies, OpenCL and CUDA. It assesses the AI's factual accuracy and knowledge of these technologies, as well as its ability to articulate the differences between them.\",\n    \"score_value\": 9\n}",
+        "role": "assistant",
+        "function_call": null,
+        "tool_calls": null
+      }
+    },
+    {
+      "finish_reason": "stop",
+      "index": 1,
+      "logprobs": null,
+      "message": {
+        "content": "{\n    \"topic_modeling\": \"Software Comparison\",\n    \"score_reason\": \"This prompt assesses the AI's factual accuracy in distinguishing between two similar but distinct software frameworks.\",\n    \"score_value\": 8\n}",
+        "role": "assistant",
+        "function_call": null,
+        "tool_calls": null
+      }
+    },
+    {
+      "finish_reason": "stop",
+      "index": 2,
+      "logprobs": null,
+      "message": {
+        "content": "{\n    \"topic_modeling\": \"Comparison, Technology\",\n    \"score_reason\": \"This prompt requires the AI to demonstrate knowledge of two different technologies, compare their features, and explain their distinctions. This task assesses the AI's factual accuracy and proficiency in understanding complex technological concepts.\",\n    \"score_value\": 9\n}",
+        "role": "assistant",
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "topic_modeling_1": "Technical Comparison",
+  "score_reason_1": "This prompt requires the AI to accurately compare and contrast two distinct technologies, OpenCL and CUDA. It assesses the AI's factual accuracy and knowledge of these technologies, as well as its ability to articulate the differences between them.",
+  "score_value_1": 9,
+  "topic_modeling_2": "Software Comparison",
+  "score_reason_2": "This prompt assesses the AI's factual accuracy in distinguishing between two similar but distinct software frameworks.",
+  "score_value_2": 8,
+  "topic_modeling_3": "Comparison, Technology",
+  "score_reason_3": "This prompt requires the AI to demonstrate knowledge of two different technologies, compare their features, and explain their distinctions. This task assesses the AI's factual accuracy and proficiency in understanding complex technological concepts.",
+  "score_value_3": 9
+}
+```
+</details>
+
+<details>
+<summary>We used the following prompt to generate the responses:</summary>
+
+
+```markdown
+We are interested in understanding how well the following input prompts can evaluate an
+AI assistant’s proficiency in problem-solving ability, creativity, or adherence to real-world
+facts. Your task is to assess each prompt based on its potential to gauge the AI’s capabilities
+effectively in these areas.
+
+For each prompt, carry out the following steps:
+
+1. Topic Modeling: Use two words to describe the task intended.
+2. Assess the Potential: Consider how challenging the prompt is, and how well it can
+   assess an AI’s problem-solving skills, creativity, or factual accuracy. Briefly explain your
+   reasoning.
+3. Assign a Score: Assign a score on a scale of 1 to 10, with a higher score representing
+   a higher potential to evaluate the AI assistant’s proficiency effectively. Use double square
+   brackets to format your scores, like so: [[5]].
+
+Guidelines for Scoring:
+• High Score (8-10): Reserved for prompts that are particularly challenging and excellently designed to assess AI proficiency.
+• Medium Score (4-7): Given to prompts that have a moderate potential to assess the AI’s
+capabilities.
+• Low Score (1-3): Allocated to prompts that are either too easy, ambiguous, or do not
+adequately assess the AI’s capabilities.
+
+Ensure to critically evaluate each prompt and avoid giving high scores to prompts that are
+ambiguous or too straightforward.
+
+The output MUST follow a JSON format:
+{
+"topic_modeling": "...",
+"score_reason": "...",
+"score_value": ...
+}
+```
+</details>
+
+<details>
+<summary>You can generate your own embeddings</summary>
+
+Note that the provided embeddings are generated using OpenAI's model, which means if you want generate new prompt, you needs an OpenAI developer account ($5 free credit for new signup otherwise needing a credit card). The code used to generate the embeddings is as follows:
+
+```python
+import openai
+client = openai.OpenAI()
+client.embeddings.create(
+    model="text-embedding-3-small", input=prompt, extra_body=dict(dimensions=256)
+)
+```
+
+You are welcomed to use open source models (you can use huggingface on datahub!) to generate the embeddings for the new prompts. A good start would be using huggingface pipeline for embedding generation:
+
+```python
+from transformers import pipeline
+
+embedder = pipeline("feature-extraction", model="distilbert-base-uncased")
+embeddings = embedder(prompt)
+```
+
+You can see more in the [feature extraction pipeline documentation](https://huggingface.co/docs/transformers/v4.37.2/en/main_classes/pipelines#transformers.FeatureExtractionPipeline). It will result in dimension of 768 for each prompt.
+
+</details>
+
+#### Project Tasks
+
+Your tasks will be open ended and feel free to explore the data as you see fit. Overall, you should aim to perform all of the following tasks. We included example questions to consider, but you are expected to come up with your own questions to answer.
+
+- EDA Tasks: Tell us more about the data. What do you see in the data? Come up with questions and answer about them. For example, what are the win-rate of GPT4? What are the most common topics? Do different judges have different preferences?
+- Modeling Tasks: Perform some modeling tasks given our ground truth labels. Can you train a logistic regression model to predict the winner given embeddings? How about a K-means clustering model to cluster the questions? Can you use linear regression to predict the hardness score?
+- Analysis Tasks: By leveraging the question embeddings, can we find similar questions? How "repeated" is the questions in the dataset? Can you reproduce the Elo score rating for the chatbots?
+
+For EDA task, we expect plots and story telling. For modeling tasks, we expect you to demostrate how the well model works and how to evaluate them. The analysis task is more open ended.
+
+#### Getting Started
+
+To get started, we provide a notebook `nlp-chatbot-starter.ipynb` that demostrate how to load and inspect the data. The project is expected to be open ended!
+
+#### Resources
+
+- [Joey's EDA and Elo rating modeling](https://colab.research.google.com/drive/1KdwokPjirkTmpO_P1WByFNFiqxWQquwH) is a great resource to get started with the EDA. Note that (1) the plot is made with plotly, we recommend you to reproduce the plot with matplotlib or seaborn, and (2) the Elo rating is a good modeling task to reproduce but we expect you to do more than just that (for example, demostrate how Elo rating works and how to calculate it in your report).
+
+- [An intuitive introduction to text embeddings](https://stackoverflow.blog/2023/11/09/an-intuitive-introduction-to-text-embeddings/) is a good resource to understand what is text embeddings and how to use them.
+
+- [Elo rating system](https://en.wikipedia.org/wiki/Elo_rating_system) and [Bradley-Terry model](https://en.wikipedia.org/wiki/Bradley%E2%80%93Terry_model) are essential to model a ranking among the pair wise comparison.
+
+- [Huggingface pipeline](https://huggingface.co/docs/transformers/en/main_classes/pipelines) have many implementations of common NLP task for you to use, including sentiment analysis, summarization, text classification, etc.
+
+- [spaCy](https://spacy.io/usage/spacy-101) is a wonderful library containing classifical NLP tasks like tokenization, lemmatization, etc.
 
 ## Group Formation + Research Proposal
 
@@ -254,12 +393,12 @@ The checkpoint is intended to keep you on track to meet your project goals. You 
     - Is there any correlation between the variables you are interested in exploring?
     - How would you cleanly and accurately visualize the relationship among variables?
     - What are your EDA questions? (For example, are there any relationships between A and B? What is the distribution of A?).
-    - Do you need to perform data transformations? 
+    - Do you need to perform data transformations?
   - **Figures(tables, plots, etc.)**
     - Descriptions of your figures. Takeaways from the figures.
     - These figures must be of good quality (i.e. they must include axes, titles, labels, etc) and they must be relevant to your proposed analysis.
 
-- **Other Preliminary Results (optional)**: Please optionally post any other preliminary results here for our information. 
+- **Other Preliminary Results (optional)**: Please optionally post any other preliminary results here for our information.
 
 ## Checkpoint 2: Mandatory Check-In
 
@@ -282,9 +421,9 @@ Your analysis notebook(s) should address all of the following components in the 
   - How do you perform cross-validation on your model?
   - What loss metrics are you using to evaluate your model? Why?
   - From a bias-variance tradeoff standpoint, how do you assess the performance of your model? How do you check if it is overfitting?
-  - How would you improve your model based on the outcome? 
+  - How would you improve your model based on the outcome?
   - Are there any further extensions to your model that would be worth exploring?
-  
+
 
 ### [Component 2] Project Write-Up
 
@@ -371,7 +510,7 @@ Each group will peer review the projects from another group. The review will be 
   - Data modeling (feature engineering, selection of the model, and evaluation of the model's performance, etc.)
   - Inference (do the results from the model sufficiently support the conclusion within the report?)
 
-The external peer review is also a great chance to learn from other people's work and reflect on the work of your own. 
+The external peer review is also a great chance to learn from other people's work and reflect on the work of your own.
 
 ### Final Report: Analysis Notebook
 
