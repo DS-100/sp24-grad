@@ -153,7 +153,7 @@ The goal of this project is to:
 #### Dataset Description
 
 
-The source dataset comes from https://huggingface.co/datasets/lmsys/chatbot_arena_conversations. The author describes the dataset as follows:
+The source dataset link is [here](https://huggingface.co/datasets/lmsys/chatbot_arena_conversations). The author describes the dataset as follows:
 
 > This dataset contains 33K cleaned conversations with pairwise human preferences. It is collected from 13K unique IP addresses on the Chatbot Arena from April to June 2023. Each sample includes a question ID, two model names, their full conversation text in OpenAI API JSON format, the user vote, the anonymized user ID, the detected language tag, the OpenAI moderation API tag, the additional toxic tag, and the timestamp.
 
@@ -193,11 +193,16 @@ We used [this prompt](https://gist.github.com/simon-mo/25c5d532bccc7f28b404cffdf
 
 Your tasks will be open ended and feel free to explore the data as you see fit. Overall, you should aim to perform all of the following tasks. We included example questions to consider, but you are expected to come up with your own questions to answer.
 
-- EDA Tasks: Tell us more about the data. What do you see in the data? Come up with questions and answer about them. For example, what are the win-rate of GPT4? What are the most common topics? Do different judges have different preferences?
-- Modeling Tasks: Perform some modeling tasks given our ground truth labels. Can you train a logistic regression model to predict the winner given embeddings? How about a K-means clustering model to cluster the questions? Can you use linear regression to predict the hardness score?
-- Analysis Tasks: By leveraging the question embeddings, can we find similar questions? How "repeated" is the questions in the dataset? Can you reproduce the Elo score rating for the chatbots?
+#### EDA Tasks
+For EDA task, we expect plots and story telling. Tell us more about the data. What do you see in the data?  Come up with questions and answer about them. For example, what are the win-rate of GPT4?  What are the most common topics? Do different judges have different preferences? What are the most common topics? What are the most common reasons for a question being hard?
 
-For EDA task, we expect plots and story telling. For modeling tasks, we expect you to demostrate how the well model works and how to evaluate them. The analysis task is more open ended.
+#### Modeling Tasks
+Perform some modeling tasks given our ground truth labels. Can you train a logistic regression model to predict the winner given embeddings? How about a K-means clustering model to cluster the questions? Can you use linear regression to predict the hardness score?
+
+For modeling tasks, we expect you to demostrate how the well model works and how to evaluate them. You should justify the choice of model and the evaluation metrics. You should also discuss the limitations of the model and how to improve them.
+
+#### Analysis Tasks
+By leveraging the question embeddings, can we find similar questions? How "repeated" is the questions in the dataset? Can you reproduce the Elo score rating for the chatbots and come up with a better ranking? How can we make sense of the data overall.
 
 #### Getting Started
 
