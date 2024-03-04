@@ -206,7 +206,9 @@ By leveraging the question embeddings, can we find similar questions? How "repea
 
 #### Getting Started
 
-To get started, we provide a notebook `nlp-chatbot-starter.ipynb` that demostrate how to load and inspect the data.
+***!!! TODO: put the notebook in public sp-24-public repo before shipping !!!***
+
+To get started, we provide a notebook [`nlp-chatbot-starter.ipynb`](https://github.com/DS-100/sp24-dev/blob/main/proj_final/nlp-chatbot-analysis/nlp-chatbot-starter.ipynb) that demostrate how to load and inspect the data.
 
 #### Resources
 
