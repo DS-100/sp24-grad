@@ -69,7 +69,7 @@ In general, if you're drawing any conclusions regarding causality, please be sur
 
 ### Accessing Datasets
 
-All the datasets provided by us can be found in the Datahub directory `shared/sp24_grad_project_data`. You can access the data directly from Datahub. If you wish to work on the project locally, you can also download the files containing the datasets for each topic. As you train more complex model, DataHub might not have enough hardware resource or memory, that case you are welcomed to use Google Colab or your local machine.
+All the datasets provided by us can be found in the Datahub directory `shared/sp24_grad_project_data`. You can access the data directly from Datahub. If you wish to work on the project locally, you can also download the files containing the datasets for each topic. As you train more complex model, DataHub might not have enough hardware resource or memory, that case you can use [Google Colab](https://colab.google/) or your local machine.
 
 ### Topic 1: Computer Vision
 In disaster situations, it is important for emergency response efforts to have access to quick and accurate information about an area in order to respond effectively. This project will explore how data science techniques can be useful for such efforts.
