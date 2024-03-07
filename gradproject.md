@@ -37,14 +37,14 @@ There are **six** deliverables in the graduate project element of the course.
 
 ### Teamwork
 
-**You must work in a group with one or two other students.** In order to give everyone experience in collaborating on a data science project, individual projects are not allowed. We have an [Ed post](https://edstem.org/us/courses/42444/discussion/3373220) for teammate search. Everyone in the same group will receive the same grade (except for exceptional circumstances).
+**You must work in a group with one or two other students.** In order to give everyone experience in collaborating on a data science project, individual projects are not allowed. Everyone in the same group will receive the same grade (except for exceptional circumstances).
 
 ## Timeline and Grading Breakdown
 
 | Deadline (at 11:59pm Pacific)| Event / Deliverable | Link | Grading Weight |
 |--------------------------	|---------------------------------------------	|---------------------------------------------	|-----------|
-| 3/15 | Research Proposal and Project Groups Due | [Google Form](https://forms.gle/KnJPVvbcr6j6wt7GA) | 5% |
-| 3/22 | Checkpoint 1: EDA + Internal Peer Review 1 Due | [Checkpoint 1](https://www.gradescope.com/courses/564792/assignments/3537706), [Internal Peer Review](https://forms.gle/TMbH2c7Ukpn2marM9)| 10% |
+| 3/15 | Research Proposal and Project Groups Due | [Google Form](https://forms.gle/DcBp3ZbM8TpTfSRD6) | 5% |
+| 3/22 | Checkpoint 1: EDA + Internal Peer Review 1 Due | [Internal Peer Review](https://forms.gle/cied6ZzmBToj3ARP9)| 10% |
 | Week of 4/8 | Checkpoint 2: Mandatory Check-in with TA  | | 7.5% |
 | 4/19 | Internal Peer Review 2 Due | | 20% |
 | 4/26 |	First Draft of Final Report Due | | 7.5% |
@@ -69,7 +69,7 @@ In general, if you're drawing any conclusions regarding causality, please be sur
 
 ### Accessing Datasets
 
-All the datasets provided by us can be found in the Datahub directory `shared/sp24_grad_project_data`. You can access the data directly from Datahub. If you wish to work on the project locally, you can also download the files containing the datasets for each topic. As you train more complex model, DataHub might not have enough hardware resource or memory, that case you can use [Google Colab](https://colab.google/) or your local machine.
+All of the provided datasets can be found in the Datahub directory `shared/sp24_grad_project_data`. You can access the data directly from Datahub. If you wish to work on the project locally, you can also download the files containing the datasets for each topic. If you choose to train more complex models, DataHub might not have enough hardware resource or memory, in which case you can use [Google Colab](https://colab.google/) or your local machine.
 
 ### Topic 1: Computer Vision
 In disaster situations, it is important for emergency response efforts to have access to quick and accurate information about an area in order to respond effectively. This project will explore how data science techniques can be useful for such efforts.
@@ -90,12 +90,15 @@ You have been hired by a crisis response agency to help assist them with your im
 #### Dataset Description
 The agency would like you to develop your approach on their internal dataset, derived from the [xView2 Challenge Dataset](https://xview2.org/). This dataset contains satellite images of buildings after various natural disasters. The buildings are labeled based on the level of damage sustained on a scale ranging from 0 (no damage) to 3 (destroyed).
 
-You can access all of the data within the `/home/jovyan/shared/satellite-image-data` directory on datahub. The dataset consists of the following folders for different natural disasters
+You can access all of the data within the `./satellite-image-data` directory. The dataset consists of the following folders for different natural disasters
 1. `midwest-flooding`
 2. `socal-fire`
 3. `hurricane-matthew`
 
-Within each folder is a zip file `train_images.npz` containing the satellite images as numpy arrays and a `train_labels.npy` file with corresponding damage level labels.
+Within each folder is a zip file `train_images.npz` containing the satellite images as numpy arrays and a `train_labels.npy` file with corresponding damage level labels. 
+
+**Testing**:
+In the main directory there are also the `test_images_hurricane-matthew.npz` and `test_images_flooding-fire.npz` zip files. The first contains test images from the `hurricane-matthew` disaster and the latter consists of a combination of test images from `midwest-flooding` and `socal-fire`.
 
 #### Getting Started
 To help you with onboarding, the agency has provided a starter notebook `starter.ipynb` which will introduce you to the dataset and some useful internal tools. After completing the onboarding assignment you will be comfortable with the following:
@@ -114,17 +117,21 @@ Now that you have successfully been onboarded, the agency would like you to star
 Please prepare an EDA report to present to the agency leadership with the above in mind.
 
 #### Project Tasks
-Now that leadership is pleased with your initial EDA report and confident in your data science ability, they would like you to assist the agency with various tasks.
+Now that leadership is pleased with your initial EDA report and confident in your data science ability, they would like you to assist the agency with various tasks. *Please complete task A first and then task B.*
 
 ##### Task A: Disaster Type Classification
 The agency consists of different subdivisions for assisting with different disaster types, e.g., fires, floods, etc. In the event of a disaster, the agency mounts its response effort by first assessing the type of disaster and then requesting the appropriate subdivision to assist with the disaster.
 
-Your task is to assist the agency with making this initial call quickly by automatically classifying images based on the disaster scenario.
+Your task is to assist the agency with making this initial call quickly by automatically classifying images based on the disaster scenario. Specifically, your role will be to build a classifier that can distinguish images from the `midwest-flooding` disaster and the `socal-fire` disaster. 
+
+To assess your performance, please submit predictions for the `test_images_flooding-fire.npz` images. This should be in a csv file `test_images_flooding-fire_predictions.csv` consisting of a single column with no header, with a $0$ to indicate a `midwest-flooding` prediction and a $1$ to indicate a `socal-fire` prediction. The prediction in row $i$ should correspond to the $i$ th image.
 
 ##### Task B: Damage Level Classification
 The agency needs to know how severe a disaster is in order to allocate resources for a response effectively. The agency is especially concerned with human lives and uses building damage as an important metric for disaster severity.
 
-Your task is to assist the agency by automatically detecting the building damage level after a disaster.
+Your task is to assist the agency by automatically detecting the building damage level after a disaster. Specifically create a damage level classifier for the `hurricane-matthew` disaster.
+
+To assess your performance, please submit predictions for the `test_images_hurricane-matthew.npz` images. This should be in a csv file `test_images_hurricane-matthew_predictions.csv` consisting of a single column with no header, with a $0-3$ prediction of the damage level. The prediction in row $i$ should correspond to the $i$ th image.
 
 #### Resources
 To assist you in your efforts the agency has compiled the following list of resources
@@ -224,7 +231,7 @@ To get started, we provide a notebook [`nlp-chatbot-starter.ipynb`](https://gith
 
 ## Group Formation + Research Proposal
 
-The first deliverable of your group project is just to form your group, choose a dataset and submit your research proposal to [this google form](https://forms.gle/KnJPVvbcr6j6wt7GA) by 11:59 pm on 10/06. Along with your research proposal, you are required to briefly explore your chosen dataset and describe it in one paragraph. You may form groups of 2 or 3 people with any Data 200A/200A/200S student. If you are having trouble finding a group, we can assign you to a group if you fill out this [form](https://forms.gle/nPHpmAWgGbjkPYtEA) by 11:59pm on 9/30.
+The first deliverable of your group project is just to form your group, choose a dataset and submit your research proposal to [this google form](https://forms.gle/DcBp3ZbM8TpTfSRD6) by 11:59 pm on 3/15. Along with your research proposal, you are required to briefly explore your chosen dataset and describe it in one paragraph. You may form groups of 2 or 3 people with any Data 200A/200A/200S student.
 
 ## Checkpoint 1: EDA + Internal Peer Review
 
