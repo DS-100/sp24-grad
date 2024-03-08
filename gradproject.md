@@ -16,24 +16,31 @@ markdown: kramdown
 
 ## Introduction
 
-The graduate project is offered only to students enrolled in Data C200, CS C200A, or Data 200S. Other students are welcome to explore the questions and datasets in the project for personal learning, but their work will not be graded or counted towards their final grades.
+The graduate project is **offered only to students enrolled in Data C200, CS C200A, or Data 200S**. Other students are welcome to explore the questions and datasets in the project for personal learning, but their work will not be graded or counted towards their final grades.
 
-The purpose of the project is to give students experience in both open-ended data science analysis and research in general. In this project, you will work with **one or any combination** of the following datasets provided to you to explore research questions that you define.
+The purpose of the project is to give students experience in both open-ended data science analysis and research in general. 
+
+<!-- In this project, you will work with **one or any combination** of the following datasets provided to you to explore research questions that you define. -->
 
 <!-- **Project criteria**: In addition to the general guidelines, each dataset option below has its own set of additional requirements for Report Format and Submission. Be sure to consult the correct section for your project option.) 0-->
 
 
 ## Deliverables
 
-There are **six** deliverables in the graduate project element of the course.
-<ul>
-<li><b>Group Formation + Research Proposal:</b> You will form a project group and will submit a google form stating your research proposal. Please see <a href="#group-formation--research-proposal">below</a> for more information. </li>
-<li><b>Checkpoint 1: EDA + Internal Peer Review:</b> You will need to submit a write-up + code for Exploratory Data Analysis on your dataset. You will also have to submit an internal peer review. Please see <a href="#checkpoint-1-eda--internal-peer-review">below</a> for more information. </li>
-<li><b>Checkpoint 2: Mandatory Check-In:</b> You will need to write a one-pager of your progress (with a focus on modeling approaches your team explored) and review it with a course staff member. Please see <a href="#checkpoint-2-mandatory-check-in">below</a> for more information. </li>
-<li><b>Checkpoint 3: Project Report First Draft + Internal Peer Review:</b> This will be your first draft; you will be required to submit a report of your EDA and modeling along with any code necessary to reproduce your results. You will also have to submit an internal peer review. More information will be announced later.</li>
-<li><b>External Peer-Review:</b> You will need to provide other project teams with feedback on their projects. More information will be announced later.</li>
-<li><b>Final Project Report:</b> You will submit the final project report. You will need to submit a report (as well as all necessary code), ensuring you incorporate all relevant feedback from the first draft and external peer review. You will also be required to make a brief 5-minute YouTube video recording of the project. More information will be announced later.</li>
-</ul>
+The graduate project element will require the following deliverables: 
+
+### Upcoming Deliverables:
+
+- **Group Formation + Research Proposal:** You will form a project group and submit a google form stating your research proposal. Please see [below](#group-formation--research-proposal) for more information.
+
+### Future Deliverables (subject to change):
+
+- **Checkpoint 1: EDA + Internal Peer Review 1:** Submit a write-up and code for Exploratory Data Analysis on your dataset. Additionally, submit an internal peer review. More information [below](#checkpoint-1-eda--internal-peer-review).
+- **Checkpoint 2: Mandatory Check-In:** Write a one-pager of your progress, focusing on the modeling approaches your team explored, and review it with a course staff member. Further details [below](#checkpoint-2-mandatory-check-in).
+- **Project Report First Draft + Internal Peer Review 2:** Submit the first draft of your report, detailing your EDA and modeling efforts, along with any necessary code. An internal peer review is also required.
+- **External Peer-Review:** Provide feedback on other project teams' work.
+- **Final Project Report:** Submit the final project report, including all necessary code. Ensure all relevant feedback from the first draft and external peer reviews are incorporated. Additionally, you are required to make a brief 5-minute YouTube video recording of the project.
+
 
 ### Teamwork
 
@@ -41,31 +48,26 @@ There are **six** deliverables in the graduate project element of the course.
 
 ## Timeline and Grading Breakdown
 
-| Deadline (at 11:59pm Pacific)| Event / Deliverable | Link | Grading Weight |
-|--------------------------	|---------------------------------------------	|---------------------------------------------	|-----------|
-| 3/15 | Research Proposal and Project Groups Due | [Google Form](https://forms.gle/DcBp3ZbM8TpTfSRD6) | 5% |
-| 3/22 | Checkpoint 1: EDA + Internal Peer Review 1 Due | [Internal Peer Review](https://forms.gle/cied6ZzmBToj3ARP9)| 10% |
-| Week of 4/8 | Checkpoint 2: Mandatory Check-in with TA  | | 7.5% |
-| 4/19 | Internal Peer Review 2 Due | | 20% |
-| 4/26 |	First Draft of Final Report Due | | 7.5% |
-| 4/29 |	External Peer Review Opens | | 7.5% |
-| 5/3 |	External Peer Review Due | | 7.5% |
-| 5/10 | Final Project Report Due, Presentation Video Due | | 50% |
+| Deadline (at 11:59 PM Pacific) | Event / Deliverable                        | Link                                                           | Grading Weight |
+|--------------------------------|--------------------------------------------|----------------------------------------------------------------|----------------|
+| 3/15                           | Research Proposal and Project Groups Due   | [Google Form](https://forms.gle/DcBp3ZbM8TpTfSRD6)             | 5%             |
+| 3/22                           | Checkpoint 1: EDA + Internal Peer Review 1 | [Internal Peer Review](https://forms.gle/cied6ZzmBToj3ARP9)    | 10%            |
+| Week of 4/8                    | Checkpoint 2: Mandatory Check-in with TA   |                                                                | 7.5%           |
+| 4/19                           | Internal Peer Review 2 Due                 |                                                                | 20%            |
+| 4/26                           | First Draft of Final Report Due            |                                                                | 7.5%           |
+| 5/3                            | External Peer Review Due                   |                                                                | 7.5%           |
+| 5/10                           | Final Project Report and Presentation Video|                                                                | 50%            |
 
 ### Late Policy
-
-* You may submit the **first draft**, **final report**, and the **presentation video** late with a 10% penalty (applying only to that portion of your project grade) for each day it is late. You may submit up to two days late. Submission times are rounded up to the next day. That is, 2 minutes late = 1 day late.
-* Internal and external peer reviews as well as other project deliverables must be completed on time (there is no grace period).
+- **No Extensions for First Draft**: The first draft cannot be submitted late as it is crucial for the peer review process.
+- **Final Report and Presentation Video**: Late submissions incur a 10% daily penalty, up to a maximum of two days. Submissions are rounded to the nearest day (e.g., 2 minutes late counts as 1 day late).
+- **Peer Reviews and Other Deliverables**: Must be submitted on time; no extensions are permitted.
 
 
 ## Datasets
 
-This section contains the datasets we will provide to you to explore your research questions.
-
-- You must incorporate **at least one** of the provided datasets.
-- You are welcome to **bring in additional datasets** to complement the datasets provided here, but you must cite the sources and clearly describe the content of any additional data you use in the final report.
-
-In general, if you're drawing any conclusions regarding causality, please be sure to consult the [extra resources on causal inference](#extra-resources-causal-inference).
+This section contains the topics we will provide to you to explore your research questions. Please choose one of the following topics to work on.
+<!-- In general, if you're drawing any conclusions regarding causality, please be sure to consult the [extra resources on causal inference](#extra-resources-causal-inference). -->
 
 ### Accessing Datasets
 
@@ -124,14 +126,14 @@ The agency consists of different subdivisions for assisting with different disas
 
 Your task is to assist the agency with making this initial call quickly by automatically classifying images based on the disaster scenario. Specifically, your role will be to build a classifier that can distinguish images from the `midwest-flooding` disaster and the `socal-fire` disaster. 
 
-To assess your performance, please submit predictions for the `test_images_flooding-fire.npz` images. This should be in a csv file `test_images_flooding-fire_predictions.csv` consisting of a single column with no header, with a $0$ to indicate a `midwest-flooding` prediction and a $1$ to indicate a `socal-fire` prediction. The prediction in row $i$ should correspond to the $i$ th image.
+To assess your performance, please submit predictions for the `test_images_flooding-fire.npz` images. This should be in a csv file `test_images_flooding-fire_predictions.csv` consisting of a single column with no header, with a 0 to indicate a `midwest-flooding` prediction and a 1 to indicate a `socal-fire` prediction. The prediction in row i should correspond to the i th image.
 
 ##### Task B: Damage Level Classification
 The agency needs to know how severe a disaster is in order to allocate resources for a response effectively. The agency is especially concerned with human lives and uses building damage as an important metric for disaster severity.
 
 Your task is to assist the agency by automatically detecting the building damage level after a disaster. Specifically create a damage level classifier for the `hurricane-matthew` disaster.
 
-To assess your performance, please submit predictions for the `test_images_hurricane-matthew.npz` images. This should be in a csv file `test_images_hurricane-matthew_predictions.csv` consisting of a single column with no header, with a $0-3$ prediction of the damage level. The prediction in row $i$ should correspond to the $i$ th image.
+To assess your performance, please submit predictions for the `test_images_hurricane-matthew.npz` images. This should be in a csv file `test_images_hurricane-matthew_predictions.csv` consisting of a single column with no header, with a 0-3 prediction of the damage level. The prediction in row i should correspond to the i th image.
 
 #### Resources
 To assist you in your efforts the agency has compiled the following list of resources
@@ -185,7 +187,7 @@ The dataset you will be working with contains `25322` rows (out of `33000` total
 There are two axuliary dataset that you can use to help with your analysis:
 
 - `./chatbot-arena-prompts-embeddings.npy` contains the 256 dimensional text embeddings for each of the human question. The embeddings are generated using OpenAI's `text-embedding` model. We will explain what is embedding and how can you use them later in this notebook. It has shape (25322, 256) and have dtype('float32').
-- `./chatbot-arena-gpt3-scores.jsonl.gz` ([example row](https://gist.github.com/simon-mo/25c5d532bccc7f28b404cffdfe719e6e#file-example-aux-row-json)contains labels for the dataset you can use for later modeling tasks. It has the following fields:
+- `./chatbot-arena-gpt3-scores.jsonl.gz` ([example row](https://gist.github.com/simon-mo/25c5d532bccc7f28b404cffdfe719e6e#file-example-aux-row-json)) contains labels for the dataset you can use for later modeling tasks. It has the following fields:
   - `question_id`: The unique identifier for the question, as seen in `./chatbot-arena-conversations.jsonl.gz`.
   - `prompt`: The extracted human question. This is equivalent to the first message in `conversation_a` and `conversation_b` in `./chatbot-arena-conversations.jsonl.gz`.
   - `openai_scores_raw_choices_nested`: The response from OpenAI GPT 3.5 model (see later for the prompt). It contains the evaluated topic model, reason for a hardness score from 1 to 10, and the value. For each prompt, we have 3 responses. We extracted the fields into the following columns.
@@ -233,7 +235,7 @@ To get started, we provide a notebook [`nlp-chatbot-starter.ipynb`](https://gith
 
 The first deliverable of your group project is just to form your group, choose a dataset and submit your research proposal to [this google form](https://forms.gle/DcBp3ZbM8TpTfSRD6) by 11:59 pm on 3/15. Along with your research proposal, you are required to briefly explore your chosen dataset and describe it in one paragraph. You may form groups of 2 or 3 people with any Data 200A/200A/200S student.
 
-## Checkpoint 1: EDA + Internal Peer Review
+<!-- ## Checkpoint 1: EDA + Internal Peer Review
 
 The checkpoint is intended to keep you on track to meet your project goals. You will need to submit exploratory data analysis results on Gradescope. This will include submitting both a report of your results so far as well as all code necessary to replicate your results. Your submission should include:
 
@@ -267,10 +269,10 @@ The checkpoint is intended to keep you on track to meet your project goals. You 
 
 The purpose of this checkpoint is to ensure you are making progress and on schedule to submit the first draft of the project in 2 weeks time. You will be required to make a one-page document summarizing all of your progress so far, and you will have to bring the document to a one-on-one meeting with a staff member. Please look at the <a href="#checkpoint-2-mandatory-check-in-75">rubric</a> for the checkpoint and what you need to include in the <a href="#final-project-report">Final Project Report</a> when determining what to include in your one-page document; the document should be a brief summary of all your progress so far. The staff member will quickly skim the document and give you guidance on the project as a whole. More details about submitting the one-page document and signing up for the staff member meeting will be announced on Ed soon.
 
-## Final Project Report
-The project submission should include the following two components, as well as the YouTube video recording (more information to be announced later).
+<!-- ## Final Project Report
+The project submission should include the following two components, as well as the YouTube video recording (more information to be announced later). -->
 
-### [Component 1] Analysis Notebooks
+<!-- ### [Component 1] Analysis Notebooks
 
 This component includes all the Jupyter Notebook(s) containing all the analyses that you performed on the datasets to support your claims in your write-up. Make sure that all references to datasets are done as `data/[path to data files]`. By running these notebooks, we should be able to replicate all the analysis/figures done in your write-up.
 
@@ -297,7 +299,7 @@ Specifically, you should ensure you address the following in the narrative:
 * Clearly state the research questions and why they are interesting and important.
 * Introduction: ensure you include a brief survey of related work on the topic(s) of your analysis. Be sure to reference current approaches/research in the context of your project, as well as how your project differs from or complements existing research. You must cite all the references you discuss in this section.
 * Description of data: ensure you outline the summary of the data and how the data was prepared for the modeling phase (summarizing your EDA work). If applicable, descriptions of additional datasets that you gathered to support your analysis may also be included.
-* Methodology: carefully describe the methods/models you use and why they are appropriate for answering your research questions. You must include a detailed description of how modeling is done in your project, including inference or prediction methods used, feature engineering and regularization if applicable, and cross-validation or test data as appropriate for model selection and evaluation. <!-- You may also include interesting findings involving your datasets. -->
+* Methodology: carefully describe the methods/models you use and why they are appropriate for answering your research questions. You must include a detailed description of how modeling is done in your project, including inference or prediction methods used, feature engineering and regularization if applicable, and cross-validation or test data as appropriate for model selection and evaluation. You may also include interesting findings involving your datasets. 
 * Summary of results: analyze your findings in relation to your research question(s). Include/reference visualizations and specific results. Discuss any interesting findings from your analysis. You are encouraged to compare the results using different inference or prediction methods (e.g. linear regression, logistic regression, or classification and regression trees). Can you explain why some methods performed better than others?
 * Discussion: evaluate your approach and discuss any limitations of the methods you used. Also, briefly describe any surprising discoveries and whether there are any interesting extensions to your analysis.
 
@@ -315,7 +317,7 @@ Please submit everything as a zip file to the final report submission portal on 
     figures/[figures included in the narrative PDF]
 ```
 
-Please use student IDs joined by `_` as the name for the top-level directory. The analysis notebooks must be runnable within this directory structure. If the narrative PDF includes any figures that are created in the analysis notebooks, the figures should be saved to `figures/` by the analysis notebooks.
+Please use student IDs joined by `_` as the name for the top-level directory. The analysis notebooks must be runnable within this directory structure. If the narrative PDF includes any figures that are created in the analysis notebooks, the figures should be saved to `figures/` by the analysis notebooks. -->
 
 ## Rubrics
 This section includes a rubric for how different project deliverables are going to be graded. This section will be updated as we get further along the project timeline.
@@ -325,7 +327,7 @@ This section includes a rubric for how different project deliverables are going 
 - List of research questions and their alignment with the given datasets (1.5%).
 - Forming teams by the deadline (2%).
 
-### Checkpoint 1: EDA + Internal Peer Review (10%)
+<!-- ### Checkpoint 1: EDA + Internal Peer Review (10%)
 - Project Introduction and Goals (0.5%).
 - Data Sampling and Collection (0.5%).
 - Data Cleaning (3%).
@@ -337,7 +339,7 @@ This section includes a rubric for how different project deliverables are going 
 - Research Questions (1.5%).
 - Feature Engineering (2%).
 - Modelling Approaches (3%).
-- Preliminary Results (1%).
+- Preliminary Results (1%). -->
 
 <!---
 
@@ -399,10 +401,10 @@ The external peer review is also a great chance to learn from other people's wor
 | **Total**                                                              | **30**|
 -->
 
-## Extra Resources: Causal Inference
+<!-- ## Extra Resources: Causal Inference
 
 When studying the relationship between datasets, you might want to consult the following references on causality vs. correlation. Oftentimes, it is tempting to make claims about causal relationships when there is not enough evidence from the data to support such claims. Please review the following references, or other reputable references that you find on the topic to familiarize yourself with relevant concepts and methods.
 
 * [Data 102  Data, Inference, and Decisions Spring 2020: Lecture 13: Causal Inference I. Moritz Hardt.](https://data102.org/sp20/assets/notes/notes13.pdf)
 * [Hernán MA, Robins JM (2020). Causal Inference: What If. Boca Raton: Chapman & Hall/CRC.](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/)
-* [Advanced Data Analysis from an Elementary Point of View by Cosma Rohilla Shalizi](https://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/)
+* [Advanced Data Analysis from an Elementary Point of View by Cosma Rohilla Shalizi](https://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/) -->
