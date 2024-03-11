@@ -31,7 +31,7 @@ The graduate project element will require the following deliverables:
 
 ### Upcoming Deliverables:
 
-- **Group Formation + Research Proposal:** You will form a project group and submit a google form stating your research proposal. Please see [below](#group-formation--research-proposal) for more information.
+- **Group Formation + Research Proposal:** You will form a project group and submit a google form stating your intended topic and a brief implemenation plan. Please see [below](#group-formation--research-proposal) for more information.
 
 ### Future Deliverables (subject to change):
 
@@ -243,7 +243,7 @@ Additionally, here are some example questions about the project that you are wel
 
 ## Group Formation + Research Proposal
 
-The first deliverable of your group project is just to form your group, choose a dataset, and submit your research proposal to [this google form](https://forms.gle/DcBp3ZbM8TpTfSRD6){:target="_blank"} by 11:59 pm on 3/15. Along with your research proposal, you are required to briefly explore your chosen dataset and describe it in one paragraph. You may form groups of 2 or 3 people with any Data 200/200A/200S student.
+The first deliverable of your group project is just to form your group, choose a dataset, and submit your implementation plan to [this google form](https://forms.gle/DcBp3ZbM8TpTfSRD6){:target="_blank"} by 11:59 pm on 3/15. The implementation plan should consist of a series of steps for completing the project along with a timeline. You may form groups of 2 or 3 people with any Data 200/200A/200S student.
 
 <!-- ## Checkpoint 1: EDA + Internal Peer Review
 
