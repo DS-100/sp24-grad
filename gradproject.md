@@ -66,12 +66,12 @@ The graduate project element will require the following deliverables:
 
 ## Datasets
 
-This section contains the topics we will provide to you to explore your research questions. Please choose one of the following datasets to work on. **You will be expected to complete all (2) tasks provided for your chosen dataset.** 
+This section contains the topics we will provide to you to explore your research questions. Please choose one of the following datasets to work on. **You will be expected to complete all (2) tasks provided for your chosen dataset.**
 <!-- In general, if you're drawing any conclusions regarding causality, please be sure to consult the [extra resources on causal inference](#extra-resources-causal-inference). -->
 
 ### Accessing Datasets
 
-All of the provided datasets can be found in the Datahub directory `shared/sp24_grad_project_data`. You can access the data directly from Datahub. If you wish to work on the project locally, you can also download the files containing the datasets for each topic. If you choose to train more complex models, DataHub might not have enough hardware resources or memory, in which case you can use [Google Colab](https://colab.google/){:target="_blank"} or your local machine. If you would like to use Google Colab, feel free to check out this [link](https://stackoverflow.com/questions/48376580/how-to-read-data-in-google-colab-from-my-google-drive){:target="_blank"} to get started. 
+All of the provided datasets can be found in the Datahub directory `shared/sp24_grad_project_data`. You can access the data directly from Datahub. If you wish to work on the project locally, you can also download the files containing the datasets for each topic by right-click on the file in JupyterLab and select "Copy Download Link". If you choose to train more complex models, DataHub might not have enough hardware resources or memory, in which case you can use [Google Colab](https://colab.google/){:target="_blank"} or your local machine. If you would like to use Google Colab, feel free to check out this [link](https://stackoverflow.com/questions/48376580/how-to-read-data-in-google-colab-from-my-google-drive){:target="_blank"} to get started.
 
 ### Topic 1: Computer Vision
 In disaster situations, it is important for emergency response efforts to have access to quick and accurate information about an area in order to respond effectively. This project will explore how data science techniques can be useful for such efforts.
@@ -186,7 +186,7 @@ There are two auxiliary datasets that you can use to help with your analysis:
 - `./chatbot-arena-gpt3-scores.jsonl.gz` ([example row](https://gist.github.com/simon-mo/25c5d532bccc7f28b404cffdfe719e6e#file-example-aux-row-json){:target="_blank"}) contains labels for the dataset you can use for later modeling tasks. It has the following fields:
   - `question_id`: The unique identifier for the question, as seen in `./chatbot-arena-conversations.jsonl.gz`.
   - `prompt`: The extracted human question. This is equivalent to the first message in `conversation_a` and `conversation_b` in `./chatbot-arena-conversations.jsonl.gz`.
-  - `openai_scores_raw_choices_nested`: The response from OpenAI GPT 3.5 model (see later for the prompt). It contains the evaluated topic model, the reason for a hardness score from 1 to 10, and the value. For each prompt, we have 3 responses. We extracted the fields into the columns below.
+  - `openai_scores_raw_choices_nested`: The response from OpenAI GPT 3.5 model (see later for the prompt). It contains the evaluated topic model, the reason for a hardness score from 1 to 10, and the value. For each prompt, we have 3 responses from GPT 3.5 because it is a probablistic model. In fact, you will find in real world there are common multiple labels from different annotators for ground truth data. We extracted the fields into the columns below.
   - `topic_modeling_1`, `topic_modeling_2`, `topic_modeling_3`: The topic modeling for the first, second, and third response. Each topic should have two words.
   - `score_reason_1`, `score_reason_2`, `score_reason_3`: The reason for the hardness score for the first, second, and third response.
   - `score_value_1`, `score_value_2`, `score_value_3`: The hardness score for the first, second, and third response.
@@ -201,9 +201,11 @@ For the EDA tasks, tell us more about the data. What do you see in the data? Com
 {:.no_toc}
 Now, we aim to better understand the different chatbot models! Please complete both Task A and B. We have included example questions to consider, but you are expected to come up with your own questions to answer.
 
+For both task, you will be working with the data provided. But you are also expected to perform prediction on a hold out set. You can find the data in `arena-validation-set-prompt-only.jsonl.gz` in the same directory. The data contains fields `question_id`, `prompt`, `model_a`, and `model_b`. You are expected to predict the winner and the hardness score for task A and B respectively. You should submit your final prediction as a `csv` file with four columns `question_id`, `winner`, `hardness_score`. The `winner` column should be one of the four values: `model_a`, `model_b`, `tie`, or `tie (bothbad)`. The `hardness_score` should be an integer from 1 to 10.
+
 #### *Task A: Modeling the Winning Model*
 {:.no_toc}
-Given a prompt, can we predict which model's response will win the user vote? You can start by analyzing the length, textual features, and embeddings of the prompt. You should also explore the difference in output of the different models. For modeling, you can use logistic regression to perform binary classification (does OpenAI model win or lose) or multi-class classification (which exact model wins). You should also evaluate the model using appropriate metrics.
+Given a prompt, can we predict which model's response will win the user vote? You can start by analyzing the length, textual features, and embeddings of the prompt. You should also explore the difference in output of the different models. For modeling, you can use logistic regression or other modeling techinque to perform classification to redict the winner for the hold out set given `prompt`, `model_a` and `model_b`. You should also evaluate the model using appropriate metrics.
 
 One hint would be to utilize topic modeling data by first clustering prompts given their embeddings, then for each cluster, train a model to predict the winner. Also, feel free to use the hardness score to help with the prediction.
 
@@ -221,7 +223,7 @@ To get started, we provide a notebook [`nlp-chatbot-starter.ipynb`](https://gith
 
 Additionally, here are some example questions about the project that you are welcome to explore.
 
-> Modeling: Perform some modeling tasks given our ground truth labels. Can you train a logistic regression model to predict the winner-given embeddings? How about a K-means clustering model to cluster the questions? Can you use linear regression to predict the hardness score? We expect you to demonstrate how the well model works and how to evaluate them. You should justify the choice of model and the evaluation metrics. You should also discuss the limitations of the model and how to improve them.
+> Modeling: Perform some modeling tasks given our ground truth labels. Can you train a logistic regression model to predict the winner given embeddings? How about a K-means clustering model to cluster the questions? Can you use linear regression to predict the hardness score? We expect you to demonstrate how the well model works and how to evaluate them. You should justify the choice of model and the evaluation metrics. You should also discuss the limitations of the model and how to improve them.
 
 > Analysis: By leveraging the question embeddings, can we find similar questions? How repeated are the questions in the dataset? Can you reproduce the Elo score rating for the chatbots and come up with a better ranking? How can we make sense of the data overall?
 
