@@ -50,8 +50,8 @@ The graduate project element will require the following deliverables:
 
 | Deadline (at 11:59 PM Pacific) | Event / Deliverable                        | Link                                                           | Grading Weight |
 |--------------------------------|--------------------------------------------|----------------------------------------------------------------|----------------|
-| 3/15                           | Research Proposal and Project Groups Due   | [Google Form](https://forms.gle/DcBp3ZbM8TpTfSRD6)             | 5%             |
-| 3/22                           | Checkpoint 1: EDA + Internal Peer Review 1 | [Internal Peer Review](https://forms.gle/cied6ZzmBToj3ARP9)    | 10%            |
+| 3/15                           | Research Proposal and Project Groups Due   | [Google Form](https://forms.gle/DcBp3ZbM8TpTfSRD6){:target="_blank"}             | 5%             |
+| 3/22                           | Checkpoint 1: EDA + Internal Peer Review 1 | [Internal Peer Review](https://forms.gle/cied6ZzmBToj3ARP9){:target="_blank"}    | 10%            |
 | Week of 4/8                    | Checkpoint 2: Mandatory Check-in with TA   |                                                                | 7.5%           |
 | 4/19                           | Internal Peer Review 2 Due                 |                                                                | 20%            |
 | 4/26                           | First Draft of Final Report Due            |                                                                | 7.5%           |
@@ -71,26 +71,21 @@ This section contains the topics we will provide to you to explore your research
 
 ### Accessing Datasets
 
-All of the provided datasets can be found in the Datahub directory `shared/sp24_grad_project_data`. You can access the data directly from Datahub. If you wish to work on the project locally, you can also download the files containing the datasets for each topic. If you choose to train more complex models, DataHub might not have enough hardware resources or memory, in which case you can use [Google Colab](https://colab.google/) or your local machine. If you would like to use Google Colab, feel free to check out this [link](https://stackoverflow.com/questions/48376580/how-to-read-data-in-google-colab-from-my-google-drive) to get started. 
+All of the provided datasets can be found in the Datahub directory `shared/sp24_grad_project_data`. You can access the data directly from Datahub. If you wish to work on the project locally, you can also download the files containing the datasets for each topic. If you choose to train more complex models, DataHub might not have enough hardware resources or memory, in which case you can use [Google Colab](https://colab.google/){:target="_blank"} or your local machine. If you would like to use Google Colab, feel free to check out this [link](https://stackoverflow.com/questions/48376580/how-to-read-data-in-google-colab-from-my-google-drive){:target="_blank"} to get started. 
 
 ### Topic 1: Computer Vision
 In disaster situations, it is important for emergency response efforts to have access to quick and accurate information about an area in order to respond effectively. This project will explore how data science techniques can be useful for such efforts.
 
-#### Sections
-The specifications for this project contain the following sections:
-* [Mission](#mission)
-* [Dataset Description](#dataset-description)
-* [Getting Started](#getting-started)
-* [Exploratory Data Analysis](#exploratory-data-analysis)
-* [Project Tasks](#project-tasks)
-* [Resources](#resources)
-* [Project Goals](#project-goals)
+#### Project Goals
+- Learn to work with image data by learning to use common feature extraction techniques like Sobel edge filtering.
+- Learn to work on real-world data with common complexities such as class imbalance, low signal-to-noise ratio, and high dimensional data.
+- Learn how to design effective preprocessing and featurization pipelines for solving difficult machine learning tasks.
 
 #### Mission
 You have been hired by a crisis response agency to help assist them with your impressive data science skills! The agency has found that using satellite imagery is highly useful for supplying information for their response efforts. Unfortunately, however, annotating these high-resolution images can be a slow process for analysts. Your mission is to help address this challenge by developing an automatic computer vision approach!
 
 #### Dataset Description
-The agency would like you to develop your approach on their internal dataset, derived from the [xView2 Challenge Dataset](https://xview2.org/). This dataset contains satellite images of buildings after various natural disasters. The buildings are labeled based on the level of damage sustained on a scale ranging from 0 (no damage) to 3 (destroyed).
+The agency would like you to develop your approach on their internal dataset, derived from the [xView2 Challenge Dataset](https://xview2.org/){:target="_blank"}. This dataset contains satellite images of buildings after various natural disasters. The buildings are labeled based on the level of damage sustained on a scale ranging from 0 (no damage) to 3 (destroyed).
 
 You can access all of the data within the `./satellite-image-data` directory. The dataset consists of the following folders for different natural disasters
 1. `midwest-flooding`
@@ -102,7 +97,7 @@ Within each folder is a zip file `train_images.npz` containing the satellite ima
 > Testing: In the main directory, there are also the `test_images_hurricane-matthew.npz` and `test_images_flooding-fire.npz` zip files. The first contains test images from the `hurricane-matthew` disaster and the latter consists of a combination of test images from `midwest-flooding` and `socal-fire`.
 
 #### Getting Started
-To help you with onboarding, the agency has provided a starter notebook `starter.ipynb` which will introduce you to the dataset and some useful internal tools. After completing the onboarding assignment you will be comfortable with the following:
+To help you with onboarding, the agency has provided a starter notebook [`starter.ipynb`](https://data100.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FDS-100%2Fsp24-student&urlpath=lab%2Ftree%2Fsp24-student%2Fgrad-proj%2Fsatellite-images%2Fstarter.ipynb&branch=main){:target="_blank"} which will introduce you to the dataset and some useful internal tools. After completing the onboarding assignment you will be comfortable with the following:
 1. Loading and visualizing data using tools from `data_utils.py`
 2. Processing different color channels in the dataset images.
 3. Extracting feature information from images using tools from `feature_utils.py`.
@@ -135,34 +130,29 @@ Your task is to assist the agency by automatically detecting the building damage
 To assess your performance, please submit predictions for the `test_images_hurricane-matthew.npz` images. This should be in a CSV file `test_images_hurricane-matthew_predictions.csv` consisting of a single column with no header, with a 0-3 prediction of the damage level. The prediction in row *i* should correspond to the *i*th image.
 
 #### Resources
-To assist you in your efforts the agency has compiled the following list of resources
-- For more background about the dataset you can look at the [paper](https://arxiv.org/pdf/1911.09296.pdf) associated with the dataset.
-- For image processing, [scikit-image](https://scikit-image.org/) is a very useful library. This [tutorial](https://www.kaggle.com/code/bextuychiev/full-tutorial-on-image-processing-in-skimage) may be helpful for learning how to use the library.
-- For problems with imbalanced classes, the [imblearn](https://imbalanced-learn.org/stable/index.html) library has useful tools and examples.
+To assist you in your efforts the agency has compiled the following list of resources:
+- For more background about the dataset you can look at the [paper](https://arxiv.org/pdf/1911.09296.pdf){:target="_blank"} associated with the dataset.
+- For image processing, [scikit-image](https://scikit-image.org/){:target="_blank"} is a very useful library. This [tutorial](https://www.kaggle.com/code/bextuychiev/full-tutorial-on-image-processing-in-skimage){:target="_blank"} may be helpful for learning how to use the library.
+- For problems with imbalanced classes, the [imblearn](https://imbalanced-learn.org/stable/index.html){:target="_blank"} library has useful tools and examples.
 
-#### Project Goals
-In addition to greatly helping out the agency, by accepting this job you will
-- Learn to work with image data by learning to use common feature extraction techniques like Sobel edge filtering.
-- Learn to work on real-world data with common complexities such as class imbalance, low signal-to-noise ratio, and high dimensional data.
-- Learn how to design effective preprocessing and featurization pipelines for solving difficult machine learning tasks.
 
 ### Topic 2: Natural Language Processing
+
 A common task in real-life data analysis involves working with text data.
 In this project, we will work with a dataset consisting of natural language questions asked by humans and answers provided by chatbots.
 
-The goal of this project is to:
-
+#### Project Goals
 - Prepare you to work with text data by learning common techniques like embedding generation, tokenization, and topic modeling.
 - Work with real-world data in its targetted domain. The data is non-trivial in both size and complexity.
 - Ask open-ended questions and answer them using data at hand.
 
 #### Dataset Description
 
-The source dataset link is [here](https://huggingface.co/datasets/lmsys/chatbot_arena_conversations). The author describes the dataset as follows:
+The source dataset link is [here](https://huggingface.co/datasets/lmsys/chatbot_arena_conversations){:target="_blank"}. The author describes the dataset as follows:
 
 > This dataset contains 33K cleaned conversations with pairwise human preferences. It is collected from 13K unique IP addresses on the Chatbot Arena from April to June 2023. Each sample includes a question ID, two model names, their full conversation text in OpenAI API JSON format, the user vote, the anonymized user ID, the detected language tag, the OpenAI moderation API tag, the additional toxic tag, and the timestamp.
 
-[Chatbot Arena](https://chat.lmsys.org/) is a platform where users can ask questions and two chatbots will provide answers. The user then votes on which chatbot provided the best answer. The dataset contains the questions, the answers, and the user votes.
+[Chatbot Arena](https://chat.lmsys.org/){:target="_blank"} is a platform where users can ask questions and two chatbots will provide answers. The user then votes on which chatbot provided the best answer. The dataset contains the questions, the answers, and the user votes.
 
 You can find the processed dataset in `./chatbot-arena-conversations.jsonl.gz`. The dataset is in JSON line format and compressed using gzip. It has gone through the following preprocessing steps to make analysis easier:
 
@@ -170,7 +160,7 @@ You can find the processed dataset in `./chatbot-arena-conversations.jsonl.gz`. 
 - Removed conversations with more than one round.
 - Removed conversations classified as toxic or harmful.
 
-The dataset you will be working with contains `25322` rows (out of `33000` total rows) and `7` columns ([example row](https://gist.github.com/simon-mo/25c5d532bccc7f28b404cffdfe719e6e#file-example-row-json)). The columns are:
+The dataset you will be working with contains `25322` rows (out of `33000` total rows) and `7` columns ([example row](https://gist.github.com/simon-mo/25c5d532bccc7f28b404cffdfe719e6e#file-example-row-json){:target="_blank"}). The columns are:
 
 - `question_id`: A unique identifier for the question.
 - `model_a`: The name of the first chatbot model.
@@ -182,22 +172,22 @@ The dataset you will be working with contains `25322` rows (out of `33000` total
 
 There are two auxiliary datasets that you can use to help with your analysis:
 
-- `./chatbot-arena-prompts-embeddings.npy` contains the 256-dimensional text embeddings for each of the human questions. The embeddings are generated using OpenAI's `text-embedding` model. We will explain what embeddings are and how can you use them later in this notebook. It has a shape (25322, 256) and has dtype('float32').
-- `./chatbot-arena-gpt3-scores.jsonl.gz` ([example row](https://gist.github.com/simon-mo/25c5d532bccc7f28b404cffdfe719e6e#file-example-aux-row-json)) contains labels for the dataset you can use for later modeling tasks. It has the following fields:
+- `./chatbot-arena-prompts-embeddings.npy` contains the 256-dimensional text embeddings for each of the human questions. The embeddings are generated using OpenAI's `text-embedding` model. We will explain what embeddings are and how you can use them later.
+- `./chatbot-arena-gpt3-scores.jsonl.gz` ([example row](https://gist.github.com/simon-mo/25c5d532bccc7f28b404cffdfe719e6e#file-example-aux-row-json){:target="_blank"}) contains labels for the dataset you can use for later modeling tasks. It has the following fields:
   - `question_id`: The unique identifier for the question, as seen in `./chatbot-arena-conversations.jsonl.gz`.
   - `prompt`: The extracted human question. This is equivalent to the first message in `conversation_a` and `conversation_b` in `./chatbot-arena-conversations.jsonl.gz`.
-  - `openai_scores_raw_choices_nested`: The response from OpenAI GPT 3.5 model (see later for the prompt). It contains the evaluated topic model, the reason for a hardness score from 1 to 10, and the value. For each prompt, we have 3 responses. We extracted the fields into the following columns.
+  - `openai_scores_raw_choices_nested`: The response from OpenAI GPT 3.5 model (see later for the prompt). It contains the evaluated topic model, the reason for a hardness score from 1 to 10, and the value. For each prompt, we have 3 responses. We extracted the fields into the columns below.
   - `topic_modeling_1`, `topic_modeling_2`, `topic_modeling_3`: The topic modeling for the first, second, and third response. Each topic should have two words.
   - `score_reason_1`, `score_reason_2`, `score_reason_3`: The reason for the hardness score for the first, second, and third response.
   - `score_value_1`, `score_value_2`, `score_value_3`: The hardness score for the first, second, and third response.
 
-We used [this prompt](https://gist.github.com/simon-mo/25c5d532bccc7f28b404cffdfe719e6e#file-prompt-md) to generate the responses. You are welcome to generate your own ground truth data. You can generate your own embeddings following [guide here](https://gist.github.com/simon-mo/25c5d532bccc7f28b404cffdfe719e6e#file-using-your-own-embeddings-md).
+We used [this prompt](https://gist.github.com/simon-mo/25c5d532bccc7f28b404cffdfe719e6e#file-prompt-md){:target="_blank"} to generate the responses. You are welcome to generate your own ground truth data. You can generate your own embeddings following [this](https://gist.github.com/simon-mo/25c5d532bccc7f28b404cffdfe719e6e#file-using-your-own-embeddings-md){:target="_blank"} guide.
 
 #### Exploratory Data Analysis
-For the EDA tasks, we expect plots and storytelling. Tell us more about the data. What do you see in the data? Come up with questions and answers about them. For example, what is the win rate of GPT4?  What are the most common topics? Do different judges have different preferences? What are the most common topics? What are the most common reasons for a question being hard?
+For the EDA tasks, tell us more about the data. What do you see in the data? Come up with questions and answers about them. For example, what is the win rate of GPT4?  What are the most common topics? Do different judges have different preferences? What are the most common topics? What are the most common reasons for a question being hard?
 
 #### Project Tasks
-Now, we aim to better understand the different chatbot models! Please complete the following tasks: Task A and Task B. We have included example questions to consider, but you are expected to come up with your own questions to answer.
+Now, we aim to better understand the different chatbot models! Please complete both Task A and B. We have included example questions to consider, but you are expected to come up with your own questions to answer.
 
 #### *Task A: Modeling the Winning Model*
 Given a prompt, can we predict which model's response will win the user vote? You can start by analyzing the length, textual features, and embeddings of the prompt. You should also explore the difference in output of the different models. For modeling, you can use logistic regression to perform binary classification (does OpenAI model win or lose) or multi-class classification (which exact model wins). You should also evaluate the model using appropriate metrics.
@@ -209,11 +199,11 @@ While we provide the hardness score generated by GPT3.5, can you explore whether
 
 You can start by analyzing the embeddings and the topic modeling data. You can then use linear regression to predict the hardness score, using existing or new features.
 
-You should also evaluate the model using appropriate metrics. One challenging aspect here is that the output score should be integer value, while linear regression output in continuous space.
+You should also evaluate the model using appropriate metrics. One challenging aspect here is that the output score should be integer value, while linear regression is used for continuous data.
 
 #### Getting Started
 
-To get started, we provide a notebook [`nlp-chatbot-starter.ipynb`](https://github.com/DS-100/sp24-dev/blob/main/proj_final/nlp-chatbot-analysis/nlp-chatbot-starter.ipynb) that demonstrate how to load and inspect the data.
+To get started, we provide a notebook [`nlp-chatbot-starter.ipynb`](https://github.com/DS-100/sp24-dev/blob/main/proj_final/nlp-chatbot-analysis/nlp-chatbot-starter.ipynb){:target="_blank"} that demonstrates how to load and inspect the data.
 
 Additionally, here are some example questions about the project that you are welcome to explore.
 
@@ -223,19 +213,19 @@ Additionally, here are some example questions about the project that you are wel
 
 #### Resources
 
-- [Joey's EDA and Elo rating modeling](https://colab.research.google.com/drive/1KdwokPjirkTmpO_P1WByFNFiqxWQquwH) is a great resource to get started with the EDA. Note that (1) the plot is made with Plotly, we recommend you to reproduce the plot with Matplotlib or Seaborn, and (2) the Elo rating is a good modeling task to reproduce but we expect you to do more than just that (for example, demonstrate how Elo rating works and how to calculate it in your report).
+- [Joey's EDA and Elo rating modeling](https://colab.research.google.com/drive/1KdwokPjirkTmpO_P1WByFNFiqxWQquwH){:target="_blank"} is a great resource to get started with the EDA. Note that (1) the plot is made with Plotly, we recommend you to reproduce the plot with Matplotlib or Seaborn, and (2) the Elo rating is a good modeling task to reproduce but we expect you to do more than just that (for example, demonstrate how Elo rating works and how to calculate it in your report).
 
-- [An intuitive introduction to text embeddings](https://stackoverflow.blog/2023/11/09/an-intuitive-introduction-to-text-embeddings/) is a good resource to understand what is text embeddings and how to use them.
+- [An intuitive introduction to text embeddings](https://stackoverflow.blog/2023/11/09/an-intuitive-introduction-to-text-embeddings/){:target="_blank"} is a good resource to understand what is text embeddings and how to use them.
 
-- [Elo rating system](https://en.wikipedia.org/wiki/Elo_rating_system) and [Bradley-Terry model](https://en.wikipedia.org/wiki/Bradley%E2%80%93Terry_model) are essential to model a ranking among the pairwise comparison.
+- [Elo rating system](https://en.wikipedia.org/wiki/Elo_rating_system){:target="_blank"} and [Bradley-Terry model](https://en.wikipedia.org/wiki/Bradley%E2%80%93Terry_model){:target="_blank"} are essential to model a ranking among the pairwise comparison.
 
-- [Huggingface pipeline](https://huggingface.co/docs/transformers/en/main_classes/pipelines) has many implementations of common NLP tasks for you to use, including sentiment analysis, summarization, text classification, etc.
+- [Huggingface pipeline](https://huggingface.co/docs/transformers/en/main_classes/pipelines){:target="_blank"} has many implementations of common NLP tasks for you to use, including sentiment analysis, summarization, text classification, etc.
 
-- [spaCy](https://spacy.io/usage/spacy-101) is a wonderful library containing classifical NLP tasks like tokenization, lemmatization, etc.
+- [spaCy](https://spacy.io/usage/spacy-101){:target="_blank"} is a wonderful library containing classifical NLP tasks like tokenization, lemmatization, etc.
 
 ## Group Formation + Research Proposal
 
-The first deliverable of your group project is just to form your group, choose a dataset, and submit your research proposal to [this google form](https://forms.gle/DcBp3ZbM8TpTfSRD6) by 11:59 pm on 3/15. Along with your research proposal, you are required to briefly explore your chosen dataset and describe it in one paragraph. You may form groups of 2 or 3 people with any Data 200A/200A/200S student.
+The first deliverable of your group project is just to form your group, choose a dataset, and submit your research proposal to [this google form](https://forms.gle/DcBp3ZbM8TpTfSRD6) by 11:59 pm on 3/15. Along with your research proposal, you are required to briefly explore your chosen dataset and describe it in one paragraph. You may form groups of 2 or 3 people with any Data 200/200A/200S student.
 
 <!-- ## Checkpoint 1: EDA + Internal Peer Review
 
