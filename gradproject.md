@@ -48,10 +48,12 @@ The graduate project element will require the following deliverables:
 
 ## Timeline and Grading Breakdown
 
+<!-- [Internal Peer Review](https://forms.gle/cied6ZzmBToj3ARP9) -->
+
 | Deadline (at 11:59 PM Pacific) | Event / Deliverable                        | Link                                                           | Grading Weight |
 |--------------------------------|--------------------------------------------|----------------------------------------------------------------|----------------|
 | 3/15                           | Research Proposal and Project Groups Due   | [Google Form](https://forms.gle/DcBp3ZbM8TpTfSRD6)             | 5%             |
-| 3/22                           | Checkpoint 1: EDA + Internal Peer Review 1 | [Internal Peer Review](https://forms.gle/cied6ZzmBToj3ARP9)    | 10%            |
+| 3/22                           | Checkpoint 1: EDA + Internal Peer Review 1 |    | 10%            |
 | Week of 4/8                    | Checkpoint 2: Mandatory Check-in with TA   |                                                                | 7.5%           |
 | 4/19                           | Internal Peer Review 2 Due                 |                                                                | 20%            |
 | 4/26                           | First Draft of Final Report Due            |                                                                | 7.5%           |
