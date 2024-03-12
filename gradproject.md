@@ -31,7 +31,7 @@ The graduate project element will require the following deliverables:
 
 ### Upcoming Deliverables:
 
-- **Group Formation + Research Proposal:** You will form a project group and submit a google form stating your intended topic and a brief implemenation plan. Please see [below](#group-formation--research-proposal) for more information.
+- **Group Formation + Research Proposal:** You will form a project group and submit a google form stating your intended topic and a brief implementation plan. Please see [below](#group-formation--research-proposal) for more information.
 
 ### Future Deliverables (subject to change):
 
