@@ -246,7 +246,7 @@ Additionally, here are some example questions about the project that you are wel
 The first deliverable of your group project is just to form your group, choose a dataset, and submit your implementation plan to [this google form](https://forms.gle/DcBp3ZbM8TpTfSRD6){:target="_blank"} by 11:59 pm on 3/15. The implementation plan should consist of a series of steps for completing the project along with a timeline. You may form groups of 2 or 3 people with any Data 200/200A/200S student.
 
 ## Checkpoint 2:
-For the checkpoint we would like for you to prepare brief answers to the following questions about the modeling process
+For the check-in we would like for you to prepare brief answers to the following questions about the modeling process
 
 - What model do you plan on using and why?
 - Does your model require hyperparameter tuning? If so, how do you approach it?
