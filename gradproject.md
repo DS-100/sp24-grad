@@ -8,9 +8,6 @@ markdown: kramdown
 # Graduate Project
 {:.no_toc}
 
-<!--### <span style="color:red"> ⚠️ Warning: This webpage is under construction; nothing here is finalized until it is on ds100.org/fa23/gradproject </span>
-{:.no_toc} -->
-
 * TOC
 {:toc}
 
@@ -19,11 +16,6 @@ markdown: kramdown
 The graduate project is **offered only to students enrolled in Data C200, CS C200A, or Data 200S**. Other students are welcome to explore the questions and datasets in the project for personal learning, but their work will not be graded or counted towards their final grades.
 
 The purpose of the project is to give students experience in both open-ended data science analysis and research in general.
-
-<!-- In this project, you will work with **one or any combination** of the following datasets provided to you to explore research questions that you define. -->
-
-<!-- **Project criteria**: In addition to the general guidelines, each dataset option below has its own set of additional requirements for Report Format and Submission. Be sure to consult the correct section for your project option.) 0-->
-
 
 ## Deliverables
 
@@ -69,7 +61,6 @@ The graduate project element will require the following deliverables:
 ## Datasets
 
 This section contains the topics we will provide to you to explore your research questions. Please choose one of the following datasets to work on. **You will be expected to complete all (2) tasks provided for your chosen dataset.**
-<!-- In general, if you're drawing any conclusions regarding causality, please be sure to consult the [extra resources on causal inference](#extra-resources-causal-inference). -->
 
 ### Accessing Datasets
 
@@ -246,99 +237,26 @@ Additionally, here are some example questions about the project that you are wel
 The first deliverable of your group project is just to form your group, choose a dataset, and submit your implementation plan to [this google form](https://forms.gle/DcBp3ZbM8TpTfSRD6){:target="_blank"} by 11:59 pm on 3/15. The implementation plan should consist of a series of steps for completing the project along with a timeline. You may form groups of 2 or 3 people with any Data 200/200A/200S student.
 
 ## Checkpoint 2:
-For the check-in we would like for you to prepare brief answers to the following questions about the modeling process
+The purpose of this checkpoint is to ensure you are making progress and are on schedule to submit the first draft of the project in approximately two weeks time. You will be required to submit a pdf document summarizing 1) all of your progress so far and 2) future plans. Guiding questions for the content of the document are detailed below. You will be required to submit the report to Gradescope before the meeting. The staff member will skim the report before the meeting and give you guidance on the project as a whole. Please refer to the [rubrics](#rubrics) section for the grading breakdown. 
 
+### Progress So Far
+- What type of data were you exploring?
+- What were your EDA questions? 
+- What was the granularity of the data?
+- What did the distribution of the data look like? Were there any outliers? Were there any missing or invalid entries?
+- If the data was not in a featurized format, what features did you explore and why?
+- Was there any correlation between the variables you were interested in exploring?
+- How did you try to cleanly and accurately visualize the relationship among variables?
+- Did you need to perform data transformations?
+
+### Future Plans
 - What model do you plan on using and why?
-- Does your model require hyperparameter tuning? If so, how do you approach it?
-- How do you engineer the features for your model? What are the rationales behind selecting these features?
-- How do you perform cross validation on your model?
-- What loss metrics are you using to evaluate your model?
-- From a bias-variance tradeoff standpoint, how do you assess the performance of your model? How do you check if it is overfitting?
-- How would you improve your model based on the outcome?
-
-<!-- ## Checkpoint 1: EDA + Internal Peer Review
-
-The checkpoint is intended to keep you on track to meet your project goals. You will need to submit exploratory data analysis results on Gradescope. This will include submitting both a report of your results so far as well as all code necessary to replicate your results. Your submission should include:
-
-- **Project Introduction and Goals:** Please briefly introduce your project. Think about introducing your project to someone who has a background in data science but does not know the dataset and your research question. This part should not exceed 500 words. Here are some components to help you get started:
-  - What is the dataset about? How was the data collected? What are the available features and information? What is the size of the dataset?
-  - What questions do you plan to ask about the dataset? Why do we care about such a problem?
-  - What is your workflow for the project? Your first step, second step…
-  - What are the models you plan to use? Why would the model be a good fit for your project? What are potential pitfalls you could run into?
-  - What is your goal for the project? What are the expected deliverables?
-
-- **EDA:** Show the results from your EDA work. You should include:
-  - **Data Sampling and Collection**
-    - How was the data collected?
-    - Was there any potential bias introduced in the sampling process?
-  - **Data Cleaning**
-    - What type of data are you currently exploring?
-    - What is the granularity of the data?
-    - What does the distribution of the data look like? Are there any outliers? Are there any missing or invalid entries?
-  - **Exploratory Data Analysis**
-    - Is there any correlation between the variables you are interested in exploring?
-    - How would you cleanly and accurately visualize the relationship among variables?
-    - What are your EDA questions? (For example, are there any relationships between A and B? What is the distribution of A?).
-    - Do you need to perform data transformations?
-  - **Figures(tables, plots, etc.)**
-    - Descriptions of your figures. Takeaways from the figures.
-    - These figures must be of good quality (i.e. they must include axes, titles, labels, etc) and they must be relevant to your proposed analysis.
-
-- **Other Preliminary Results (optional)**: Please optionally post any other preliminary results here for our information.
-
-## Checkpoint 2: Mandatory Check-In
-
-The purpose of this checkpoint is to ensure you are making progress and on schedule to submit the first draft of the project in 2 weeks time. You will be required to make a one-page document summarizing all of your progress so far, and you will have to bring the document to a one-on-one meeting with a staff member. Please look at the <a href="#checkpoint-2-mandatory-check-in-75">rubric</a> for the checkpoint and what you need to include in the <a href="#final-project-report">Final Project Report</a> when determining what to include in your one-page document; the document should be a brief summary of all your progress so far. The staff member will quickly skim the document and give you guidance on the project as a whole. More details about submitting the one-page document and signing up for the staff member meeting will be announced on Ed soon.
-
-<!-- ## Final Project Report
-The project submission should include the following two components, as well as the YouTube video recording (more information to be announced later). -->
-
-<!-- ### [Component 1] Analysis Notebooks
-
-This component includes all the Jupyter Notebook(s) containing all the analyses that you performed on the datasets to support your claims in your write-up. Make sure that all references to datasets are done as `data/[path to data files]`. By running these notebooks, we should be able to replicate all the analysis/figures done in your write-up.
-
-Your analysis notebook(s) should address all of the following components in the data science lifecycle. Please note that a thorough explanation of your thought process and approach is **as important as** your work. Unreadable/uncommented code will lose points. Along with the code for the EDA portion (which also has to be included), we have provided a few additional preliminary questions/tips you can consider for the modeling portion of the project:
-
-  - What are the research questions that you are answering through your analysis? What type of machine learning problem are you investigating?
-  - Which model(s) do you use and why?
-  - How do you use your data for training and testing?
-  - Does your model require hyperparameter tuning? If so, how do you approach it?
-  - How do you engineer the features for your model? What are the rationales behind selecting these features?
-  - How do you perform cross-validation on your model?
-  - What loss metrics are you using to evaluate your model? Why?
-  - From a bias-variance tradeoff standpoint, how do you assess the performance of your model? How do you check if it is overfitting?
-  - How would you improve your model based on the outcome?
-  - Are there any further extensions to your model that would be worth exploring?
-
-
-### [Component 2] Project Write-Up
-
-This is a single PDF that summarizes your workflow and what you have learned. It should be structured as a research paper and include a title, list of authors, abstract, introduction, description of data, methodology, summary of results, discussion, conclusion, and references. Make sure to number figures and tables, include informative captions, and ensure you include the provenance of the figures in the main narrative. We encourage you to render the PDF using LaTeX, but we will not be able to provide assistance with LaTeX-related issues.
-
-Specifically, you should ensure you address the following in the narrative:
-
-* Clearly state the research questions and why they are interesting and important.
-* Introduction: ensure you include a brief survey of related work on the topic(s) of your analysis. Be sure to reference current approaches/research in the context of your project, as well as how your project differs from or complements existing research. You must cite all the references you discuss in this section.
-* Description of data: ensure you outline the summary of the data and how the data was prepared for the modeling phase (summarizing your EDA work). If applicable, descriptions of additional datasets that you gathered to support your analysis may also be included.
-* Methodology: carefully describe the methods/models you use and why they are appropriate for answering your research questions. You must include a detailed description of how modeling is done in your project, including inference or prediction methods used, feature engineering and regularization if applicable, and cross-validation or test data as appropriate for model selection and evaluation. You may also include interesting findings involving your datasets.
-* Summary of results: analyze your findings in relation to your research question(s). Include/reference visualizations and specific results. Discuss any interesting findings from your analysis. You are encouraged to compare the results using different inference or prediction methods (e.g. linear regression, logistic regression, or classification and regression trees). Can you explain why some methods performed better than others?
-* Discussion: evaluate your approach and discuss any limitations of the methods you used. Also, briefly describe any surprising discoveries and whether there are any interesting extensions to your analysis.
-
-The narrative PDF should include figures sparingly to support specific claims. It can include a few runnable code components, but it should not have large amounts of code. The length of the report should be 8 ± 2 pages when it is printed as a PDF, excluding figures and code.
-
-Tip: if you need to write a large amount of LaTeX on markdown, you may want to use the `%%latex` cell magic. However, we also encourage you to explore [Overleaf](https://www.overleaf.com) for easily writing clean LaTeX documents.
-
-Please submit everything as a zip file to the final report submission portal on Gradescope. Please make sure the folder in the zip file has the following structure:
-
-```
-[your studentIDs joined by _]/
-    data/[all datasets used]
-    analysis/[analysis notebooks]
-    narrative/[narrative PDF]
-    figures/[figures included in the narrative PDF]
-```
-
-Please use student IDs joined by `_` as the name for the top-level directory. The analysis notebooks must be runnable within this directory structure. If the narrative PDF includes any figures that are created in the analysis notebooks, the figures should be saved to `figures/` by the analysis notebooks. -->
+- Will your model require hyperparameter tuning? If so, how will you approach it?
+- How will you engineer the features for your model? What are the rationales behind selecting these features?
+- How will you perform cross validation on your model?
+- What loss metrics are you going to use to evaluate your model?
+- From a bias-variance tradeoff standpoint, how will you assess the performance of your model? How will you check if it is overfitting?
+- How will you improve your model based on the outcome?
 
 ## Rubrics
 This section includes a rubric for how different project deliverables are going to be graded. This section will be updated as we get further along the project timeline.
@@ -347,84 +265,8 @@ This section includes a rubric for how different project deliverables are going 
 - Short paragraph description of implementation plan and timeline (2%).
 - Forming teams by the deadline (3%).
 
-<!-- ### Checkpoint 1: EDA + Internal Peer Review (10%)
-- Project Introduction and Goals (0.5%).
-- Data Sampling and Collection (0.5%).
-- Data Cleaning (3%).
-- Exploratory Data Analysis (3%).
-- Figures (tables, plots, etc.) (2.5%).
-- Internal Peer Review (0.5%).
-
 ### Checkpoint 2: Mandatory Check-In (7.5%)
-- Research Questions (1.5%).
+- Exploratory Data Analysis (1.5%).
 - Feature Engineering (2%).
 - Modelling Approaches (3%).
-- Preliminary Results (1%). -->
-
-<!---
-
-### Checkpoint Rubric
-
-See the checkpoint description [here](#checkpoint).
-
-| Criterion | Points |
-| --- | --- |
-| Project Introduction and Goals | 4 |
-| EDA 1 | 3 |
-| EDA 2 | 3 |
-| Other Preliminary Results (optional) | 0 |
-
-### Internal Peer Review
-
-The internal peer review is a simple google form checking if each member of the group is contributing to the project and how the tasks are distributed among members. This is graded on completion.
-
-### External Peer Review
-
-Each group will peer review the projects from another group. The review will be graded by staff out of a total of 5 points. Each review should include the following components:
-
-1. (1 point) A summary of the report. The summary should address at least the following:
-  - What research question does the group propose? Why is it important?
-  - How does the dataset relate to the research question?
-  - What data modeling/inference techniques do the group primarily use to gain insights into their research question? Why are these techniques suitable for the task?
-  - What are the next steps a researcher can take if they want to investigate the question further based off the work in the project?
-
-2. (4 points, 2 per component) An evaluation of the report based on the Data Science Lifecycle. The review should include at least **one strong point and one suggestion for improvement** for each of the following components in the project:
-  - Data collection and sampling
-  - Data cleaning
-  - Exploratory data analysis (data wrangling, visualization, etc.)
-  - Data modeling (feature engineering, selection of the model, and evaluation of the model's performance, etc.)
-  - Inference (do the results from the model sufficiently support the conclusion within the report?)
-
-The external peer review is also a great chance to learn from other people's work and reflect on the work of your own.
-
-### Final Report: Analysis Notebook
-
-| Criterion                                             | Points|
-|-------------------------------------------------------|-------|
-| Code readability and documentation                    | 5     |
-| Proper and sufficient utilization of Python libraries | 5     |
-| Overall code quality                                  | 3     |
-| Replicability of the results                          | 7     |
-| **Total**                                             | **20**|
-
-### Final Report: Project Writeup
-
-| Criterion                                                              | Points|
-|------------------------------------------------------------------------|-------|
-| Introduction, motivation, and presentation of the research question(s) | 3     |
-| Exploratory data analysis                                              | 5     |
-| Modeling and inference techniques                                      | 7     |
-| Analysis of results                                                    | 7     |
-| Implementation of peer review feedback                                 | 3     |
-| Discussion of potential societal impacts and/or ethical concerns       | 2     |
-| Overall clarity and structure of the report                            | 3     |
-| **Total**                                                              | **30**|
--->
-
-<!-- ## Extra Resources: Causal Inference
-
-When studying the relationship between datasets, you might want to consult the following references on causality vs. correlation. Oftentimes, it is tempting to make claims about causal relationships when there is not enough evidence from the data to support such claims. Please review the following references, or other reputable references that you find on the topic to familiarize yourself with relevant concepts and methods.
-
-* [Data 102  Data, Inference, and Decisions Spring 2020: Lecture 13: Causal Inference I. Moritz Hardt.](https://data102.org/sp20/assets/notes/notes13.pdf)
-* [Hernán MA, Robins JM (2020). Causal Inference: What If. Boca Raton: Chapman & Hall/CRC.](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/)
-* [Advanced Data Analysis from an Elementary Point of View by Cosma Rohilla Shalizi](https://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/) -->
+- Preliminary Results (1%).
