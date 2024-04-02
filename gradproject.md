@@ -245,6 +245,17 @@ Additionally, here are some example questions about the project that you are wel
 
 The first deliverable of your group project is just to form your group, choose a dataset, and submit your implementation plan to [this google form](https://forms.gle/DcBp3ZbM8TpTfSRD6){:target="_blank"} by 11:59 pm on 3/15. The implementation plan should consist of a series of steps for completing the project along with a timeline. You may form groups of 2 or 3 people with any Data 200/200A/200S student.
 
+## Checkpoint 2:
+For the checkpoint we would like for you to prepare brief answers to the following questions about the modeling process
+
+- What model do you plan on using and why?
+- Does your model require hyperparameter tuning? If so, how do you approach it?
+- How do you engineer the features for your model? What are the rationales behind selecting these features?
+- How do you perform cross validation on your model?
+- What loss metrics are you using to evaluate your model?
+- From a bias-variance tradeoff standpoint, how do you assess the performance of your model? How do you check if it is overfitting?
+- How would you improve your model based on the outcome?
+
 <!-- ## Checkpoint 1: EDA + Internal Peer Review
 
 The checkpoint is intended to keep you on track to meet your project goals. You will need to submit exploratory data analysis results on Gradescope. This will include submitting both a report of your results so far as well as all code necessary to replicate your results. Your submission should include:
